@@ -1,4 +1,6 @@
-public class funcionalidades {
+package logica;
+
+public class Funcionalidades {
 
     static final String letras = "bcdfghjklmpkrstvwyxyz";
     static final String vocales = "aeiou" ;
@@ -9,15 +11,12 @@ public class funcionalidades {
     public static int int_aleatorio(int min , int max){
         return (int)(Math. random()*(max-min)+min);
     }
-
     public static int int_aleatorio(){
         return (int)(Math. random()*(100));
     }
-
     public static int int_aleatorio(String string){
         return (int)(Math. random()*(string.length()));
     }
-
     public static float float_aleatorio(){
         return  (float) Math.random();
     }
@@ -84,72 +83,5 @@ public class funcionalidades {
     }//fin aletorizar
 
     //public static int generar_tamano_planeta (){};
-
-
-    //********************************************************************
-
-    private static int[] posiblidades_planetas = {55,30,30}; //normal , congelado, calentito
-    private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //normal, basura, vacío
-    public static CuerpoCeleste [][] galaxia = new CuerpoCeleste [20][20];
-
-
-    private static CuerpoCeleste generar_CuerpoCeleste (int x, int y){
-        int num = aletorizar(posiblidades_CuerposCelestes);
-        CuerpoCeleste cuerpo = new Vacio(x, y);
-        CuerpoCeleste nuevoCuerpo;
-        switch (num){
-            case 0: //Planeta
-                nuevoCuerpo = new Planeta(x, y, generar_nombre_aleatorio() , aletorizar(posiblidades_planetas));
-                return nuevoCuerpo;
-
-            case 1: //Asteroide
-                nuevoCuerpo = new Asteroide(x, y);
-                return nuevoCuerpo;
-
-            case 2: //Vacío
-                nuevoCuerpo = new Vacio(x, y);
-                return nuevoCuerpo;
-
-        }
-        // esto nunca se debería retornar, intentar mejorarlo
-        return cuerpo;
-    }
-
-
-
-     public static void crear_universo(){
-
-        for (int x = 0; x < galaxia.length; x++) {
-            //System.out.println("");
-
-            for (int y = 0; y < galaxia[x].length; y++) {
-                //System.out.print(x + "/" + y + " ");
-
-                CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(x,y);
-                galaxia[x][y] = nuevoCuerpo;
-
-                }
-            }
-        System.out.println("Cuerpos celestes instanciados");
-        inspeccionar_universo();
-
-    }; // fin crear universo
-
-    public static void inspeccionar_universo(){
-
-        for (int x = 1; x < galaxia.length; x++) {
-
-
-            for (int y = 1; y < galaxia[x].length; y++) {
-                System.out.print(x + "/" + y + " ");
-                System.out.println(galaxia[x][y].toString());
-            }
-        }
-
-
-    }//fin inspeccionar
-
-
-
 }//fin funcionalidades
 
