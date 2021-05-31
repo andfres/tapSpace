@@ -7,7 +7,7 @@ public class Universo {
     static final int NUMxLado = 5;
     static final int NUMCUERPOS = NUMxLado * NUMxLado;
 
-    private static int[] posiblidades_planetas = {55,30,30}; //normal , congelado, calentito
+    private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
     private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //normal, basura, vacío
 
     public static CuerpoCeleste [] galaxia = new CuerpoCeleste [NUMCUERPOS];
@@ -33,7 +33,10 @@ public class Universo {
         CuerpoCeleste nuevoCuerpo;
         switch (num){
             case 0: //Planeta
-                nuevoCuerpo = new Planeta(cordenada, Funcionalidades.generar_nombre_aleatorio() , Funcionalidades.aletorizar(posiblidades_planetas));
+                nuevoCuerpo = new Planeta(cordenada,
+                        Funcionalidades.generar_nombre_aleatorio(),
+                        Funcionalidades.aletorizar(posiblidades_planetas));
+
                 return nuevoCuerpo;
 
             case 1: //Asteroide
@@ -44,7 +47,7 @@ public class Universo {
                 nuevoCuerpo = new Vacio(cordenada);
                 return nuevoCuerpo;
         }
-        // esto nunca se debería retornar, intentar mejorarlo
+
         return cuerpo;
     }
 

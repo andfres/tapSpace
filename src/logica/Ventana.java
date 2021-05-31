@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame implements ActionListener {
-//canvas??
 
 
 
@@ -30,33 +29,29 @@ public class Ventana extends JFrame implements ActionListener {
 
         this.setTitle("Tap Space");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //this.setBounds(400,200,750,750);
-        this.setPreferredSize(new Dimension(400,400));
+        this.setSize(700,700);
 
-        this.setSize(750,750);
-
-        //this.pack();
         this.setLocationRelativeTo(null);
-        this.setLayout(new BorderLayout());
+        //this.setLayout(new BorderLayout());
+        //this.pack();
+        this.setResizable(false);
+        this.setLayout(null);
 
-
-        panelIzqUI();
         panelCentroUI();
-        panelDerechoUI();
+        panelIzqUI();
+
         panelAbajoUI();
-
-
 
         this.setVisible(true);
         //this.pack();
         this.repaint();
-
     }
 
     public void panelCentroUI(){
 
         JPanel panel = panelCental;
-        panel.setPreferredSize(new Dimension(400,400));
+        //panel.setPreferredSize(new Dimension(450,450));
+        panel.setBounds(0,0,500,500);
         panel.setBackground(Color.red);
 
         int numCuerposCelestes = Universo.galaxia.length;
@@ -65,55 +60,42 @@ public class Ventana extends JFrame implements ActionListener {
 
 
 
-
-
-
-
-//        for (int i = 0; i < numCuerposCelestes; i++) {
-//            JButton nuevoboton = new JButton("" + i);
-//            nuevoboton.setSize(50,50);
-//
-//            ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
-//            Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
-//            nuevoboton.setIcon(img);
-//
-//            panel.add(nuevoboton);
-//            nuevoboton.setVisible(true);
-//        }
-
-
         for (int i = 0; i < numCuerposCelestes; i++) {
             JLabel nuevoboton = new JLabel();
-            nuevoboton.setSize(100,100);
+            nuevoboton.setSize(10,10);
 
-            ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
+            String nombre_imagen = Universo.galaxia[i].nombre_imagen;
+            String path_imagen = "src/imagenes/" + nombre_imagen;
+
+
+            //ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
+            ImageIcon img = new ImageIcon(path_imagen);
             Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
+
             nuevoboton.setIcon(img);
 
             panel.add(nuevoboton);
             nuevoboton.setVisible(true);
         }
 
-
-
         this.add(panel, BorderLayout.CENTER);
-
 
     }
 
     public void panelIzqUI (){
         JPanel panel = panelIzq;
         panel.setBackground(Color.cyan);
-        panel.setPreferredSize(new Dimension(200,450));
+        //panel.setPreferredSize(new Dimension(200,450));
+        panel.setBounds(500,0,200,700);
 
-        this.add(panel, BorderLayout.WEST);
+        //this.add(panel, BorderLayout.WEST);
+        this.add(panel);
 
         Dimension dboton = new Dimension();
         dboton.setSize(150, 50);
 
         boton1.setSize(dboton);
         boton2.setSize(dboton);
-
 
         boton1.setText("Crear Universo");
         boton2.setText("Tamaño medio ");
@@ -126,22 +108,21 @@ public class Ventana extends JFrame implements ActionListener {
 
     }
 
-    public void panelDerechoUI (){
+//    public void panelDerechoUI (){
+//        JPanel panel = panelDerecho;
+//        panel.setBackground(Color.green);
+//        panel.setPreferredSize(new Dimension(200,450));
+//        this.add(panel, BorderLayout.EAST);
+//    }
 
-        JPanel panel = panelDerecho;
-        panel.setBackground(Color.green);
-        panel.setPreferredSize(new Dimension(100,450));
-
-        this.add(panel, BorderLayout.EAST);
-
-    }
 
     public void panelAbajoUI (){
         JPanel panel = panelAbajo;
         panel.setBackground(Color.magenta);
-        panel.setPreferredSize(new Dimension(400,100));
+        //panel.setPreferredSize(new Dimension(850,200));
+        panel.setBounds(0, 500, 500 , 200);
 
-        this.add(panel, BorderLayout.SOUTH);
+        this.add(panel);
 
     }
 
@@ -151,7 +132,9 @@ public class Ventana extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==boton1) {
             System.out.println("creando uni");
-            Universo.crear_galaxia();        }
+            Universo.crear_galaxia();
+            this.repaint();
+        }
 
         if(e.getSource()==boton2) {
 
@@ -160,7 +143,6 @@ public class Ventana extends JFrame implements ActionListener {
 
 
     }
-
 
 
 }

@@ -1,5 +1,6 @@
 package main;
 
+import logica.Universo;
 import logica.Ventana;
 
 public class Main {
@@ -7,8 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //funcionalidades.crear_universo();
-
+        Universo.crear_galaxia();
         Ventana ventana = new Ventana();
 
     }
