@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Ventana extends JFrame implements ActionListener {
 
@@ -73,6 +75,15 @@ public class Ventana extends JFrame implements ActionListener {
             Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
 
             nuevoboton.setIcon(img);
+
+
+            nuevoboton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    System.out.println("Has hecho click en " + nombre_imagen);
+                }
+            });
+
 
             panel.add(nuevoboton);
             nuevoboton.setVisible(true);
