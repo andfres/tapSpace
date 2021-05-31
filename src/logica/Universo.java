@@ -15,10 +15,10 @@ public class Universo {
     static ArrayList<Coordenada> coordenadas = new ArrayList<Coordenada>();
 
 
-    static void crearCoordenadas(int num_x_lado){
-        for (int x = 0; x <= num_x_lado; x++) {
+    static void crearCoordenadas(){
+        for (int x = 0; x <= NUMxLado; x++) {
 
-            for (int y = 0; y <= num_x_lado; y++) {
+            for (int y = 0; y <= NUMxLado; y++) {
                 System.out.print(x + "/" + y + " " );
                 coordenadas.add( new Coordenada(x, y) );
 
@@ -51,9 +51,9 @@ public class Universo {
 
 
 
-    public static void crear_universo(){
+    public static void crear_galaxia(){
 
-        crearCoordenadas(NUMxLado);
+        crearCoordenadas();
         System.out.println(coordenadas.toString());
 
         for (int x = 0; x < galaxia.length; x++) {
@@ -63,13 +63,13 @@ public class Universo {
         }
 
         System.out.println("Cuerpos celestes instanciados");
-        inspeccionar_universo();
+        inspeccionar_galaxia();
 
     }; // fin crear universo
 
 
 
-    public static void inspeccionar_universo(){
+    public static void inspeccionar_galaxia(){
 
         for (int x = 1; x < galaxia.length; x++) {
             System.out.println(galaxia[x].toString());
