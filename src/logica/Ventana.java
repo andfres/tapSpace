@@ -6,8 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame implements ActionListener {
+//canvas??
 
-    Dimension d100 = new Dimension(100,100);
+
 
     JPanel panelIzq = new JPanel();
     JPanel panelCental = new JPanel();
@@ -29,44 +30,70 @@ public class Ventana extends JFrame implements ActionListener {
 
         this.setTitle("Tap Space");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(400,200,750,750);
+        //this.setBounds(400,200,750,750);
+        this.setPreferredSize(new Dimension(400,400));
 
+        this.setSize(750,750);
 
         //this.pack();
+        this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout());
 
 
         panelIzqUI();
-        galaxiarUI();
+        panelCentroUI();
         panelDerechoUI();
         panelAbajoUI();
 
+
+
         this.setVisible(true);
         //this.pack();
-
+        this.repaint();
 
     }
 
-    public void galaxiarUI(){
+    public void panelCentroUI(){
 
         JPanel panel = panelCental;
-        panel.setPreferredSize(d100);
+        panel.setPreferredSize(new Dimension(400,400));
         panel.setBackground(Color.red);
 
         int numCuerposCelestes = Universo.galaxia.length;
         GridLayout grid = new GridLayout(Universo.NUMxLado,Universo.NUMxLado);
         panel.setLayout(grid);
 
-        ImageIcon img = new ImageIcon("planeta_02.jpg");
+
+
+
+
+
+
+//        for (int i = 0; i < numCuerposCelestes; i++) {
+//            JButton nuevoboton = new JButton("" + i);
+//            nuevoboton.setSize(50,50);
+//
+//            ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
+//            Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
+//            nuevoboton.setIcon(img);
+//
+//            panel.add(nuevoboton);
+//            nuevoboton.setVisible(true);
+//        }
 
 
         for (int i = 0; i < numCuerposCelestes; i++) {
-            JButton nuevoboton = new JButton("" + i);
+            JLabel nuevoboton = new JLabel();
+            nuevoboton.setSize(100,100);
+
+            ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
+            Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
             nuevoboton.setIcon(img);
 
             panel.add(nuevoboton);
-
+            nuevoboton.setVisible(true);
         }
+
 
 
         this.add(panel, BorderLayout.CENTER);
@@ -77,7 +104,7 @@ public class Ventana extends JFrame implements ActionListener {
     public void panelIzqUI (){
         JPanel panel = panelIzq;
         panel.setBackground(Color.cyan);
-        panel.setPreferredSize(d100);
+        panel.setPreferredSize(new Dimension(200,450));
 
         this.add(panel, BorderLayout.WEST);
 
@@ -89,7 +116,7 @@ public class Ventana extends JFrame implements ActionListener {
 
 
         boton1.setText("Crear Universo");
-        boton2.setText("Crear Coordenadas");
+        boton2.setText("Tamaño medio ");
 
         boton1.addActionListener(this);
         boton2.addActionListener(this);
@@ -103,7 +130,7 @@ public class Ventana extends JFrame implements ActionListener {
 
         JPanel panel = panelDerecho;
         panel.setBackground(Color.green);
-        panel.setPreferredSize(d100);
+        panel.setPreferredSize(new Dimension(100,450));
 
         this.add(panel, BorderLayout.EAST);
 
@@ -112,7 +139,7 @@ public class Ventana extends JFrame implements ActionListener {
     public void panelAbajoUI (){
         JPanel panel = panelAbajo;
         panel.setBackground(Color.magenta);
-        panel.setPreferredSize(d100);
+        panel.setPreferredSize(new Dimension(400,100));
 
         this.add(panel, BorderLayout.SOUTH);
 
@@ -127,9 +154,13 @@ public class Ventana extends JFrame implements ActionListener {
             Universo.crear_galaxia();        }
 
         if(e.getSource()==boton2) {
-            //System.out.println("creando coordenadas");
-            Universo.crear_galaxia();
 
+            boton2.setText("alto = " + panelCental.getHeight() + "\r ancho" + panelCental.getWidth()) ;
         }
+
+
     }
+
+
+
 }
