@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Universo {
 
-    static final int NUMxLado = 10;
+    public static final int NUMxLado = 10;
     static final int NUMCUERPOS = NUMxLado * NUMxLado;
 
     private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
@@ -62,7 +62,7 @@ public class Universo {
         System.out.println(coordenadas.toString());
 
         for (int x = 0; x < galaxia.length; x++) {
-            System.out.println("creado cuerpo celeleste num " + x);
+            //System.out.println("creado cuerpo celeleste num " + x);
             CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(coordenadas.get(x));
             galaxia[x] = nuevoCuerpo;
         }

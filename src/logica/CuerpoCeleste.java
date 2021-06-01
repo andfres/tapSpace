@@ -25,7 +25,7 @@ class Planeta extends CuerpoCeleste{
     private String nombre;
     private int tipo_planeta;
     private String [] []  array_nombres_fotos = {
-         {"planeta_03.jpg" , "planeta_04.jpg", "planeta_16.jpg", "planeta_16.jpg" },
+         {"planeta_03.jpg" , "planeta_04.jpg", "planeta_16.jpg", "planeta_18.jpg" },
          {"planeta_02.jpg" , "planeta_07.jpg", "planeta_08.jpg", "planeta_14.jpg" },
          {"planeta_01.jpg" , "planeta_05.jpg", "planeta_12.jpg", "planeta_13.jpg" },
          {"planeta_10.jpg" , "planeta_11.jpg" }};
@@ -48,6 +48,10 @@ class Planeta extends CuerpoCeleste{
 
         int size = array_nombres_fotos[tipo_planeta].length;
         int num = Funcionalidades.int_aleatorio(0,size);
+        System.out.println("tamaño array" +size);
+
+        //System.out.println("eligiendo planteta:" + num);
+
         return array_nombres_fotos[tipo_planeta][num];
     }
 
@@ -62,10 +66,10 @@ class Planeta extends CuerpoCeleste{
 
 
     public String toString_detallado() {
-        return mostrarCoordenada() + "\r" +
+        return mostrarCoordenada() + "\r\n" +
                 "Planeta" +
-                "name='" + nombre + '\'' +
-                "tipo='" + tipo_planeta_string[tipo_planeta] + "\r";
+                "name: " + nombre + "\r\n" +
+                "tipo: " + tipo_planeta_string[tipo_planeta] + "\r\n";
     }
 
 

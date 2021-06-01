@@ -9,6 +9,7 @@ public class Funcionalidades {
     static String [] nombres = new String[100];
 
     public static int int_aleatorio(int min , int max){
+
         return (int)(Math. random()*(max-min)+min);
     }
     public static int int_aleatorio(){
