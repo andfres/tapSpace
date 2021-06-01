@@ -14,6 +14,7 @@ class Planeta extends CuerpoCeleste{
 
     private String nombre;
     private int tipo_planeta;
+
 //    private String [] tipo_planeta_string = {"planetas_roca" , "planetas_agua" , "planetas_bosque", "planetas_fuego"};
 //
 //    private String [] planetas_roca = {"planeta_3.jpg" , "planeta_4.jpg", "planeta_9.jpg", "planeta_16.jpg" };
@@ -24,7 +25,7 @@ class Planeta extends CuerpoCeleste{
 
     private String [] [] tipo_planeta_string = {
 
-         {"planeta_03.jpg" , "planeta_04.jpg", "planeta_09.jpg", "planeta_16.jpg" },
+         {"planeta_03.jpg" , "planeta_04.jpg", "planeta_16.jpg", "planeta_16.jpg" },
          {"planeta_02.jpg" , "planeta_07.jpg", "planeta_08.jpg", "planeta_14.jpg" },
          {"planeta_01.jpg" , "planeta_05.jpg", "planeta_12.jpg", "planeta_13.jpg" },
          {"planeta_10.jpg" , "planeta_11.jpg" }};
@@ -40,10 +41,7 @@ class Planeta extends CuerpoCeleste{
     // crear un metodo para aleatorizar imagen
     public int elegirFoto(int tipo_planeta){
 
-
         int size = tipo_planeta_string[tipo_planeta].length;
-
-
 
         return 0;
     }
