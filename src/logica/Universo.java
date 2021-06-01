@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Universo {
 
-    static final int NUMxLado = 5;
+    static final int NUMxLado = 10;
     static final int NUMCUERPOS = NUMxLado * NUMxLado;
 
     private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
@@ -16,9 +16,9 @@ public class Universo {
 
 
     static void crearCoordenadas(){
-        for (int x = 0; x <= NUMxLado; x++) {
+        for (int x = 1; x < NUMxLado + 1; x++) {
 
-            for (int y = 0; y <= NUMxLado; y++) {
+            for (int y = 1; y < NUMxLado + 1; y++) {
                 System.out.print(x + "/" + y + " " );
                 coordenadas.add( new Coordenada(x, y) );
 
@@ -46,6 +46,8 @@ public class Universo {
             case 2: //Vacío
                 nuevoCuerpo = new Vacio(cordenada);
                 return nuevoCuerpo;
+
+
         }
 
         return cuerpo;

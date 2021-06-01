@@ -1,13 +1,13 @@
+//esto es mio, deberia eliminarse
+
 package logica;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame implements ActionListener {
-
-
 
     JPanel panelIzq = new JPanel();
     JPanel panelCental = new JPanel();
@@ -15,13 +15,15 @@ public class Ventana extends JFrame implements ActionListener {
     JPanel panelArriba = new JPanel();
     JPanel panelAbajo = new JPanel();
 
-    JButton boton1 = new JButton();
-
+    public static JLabel labelInfo = new JLabel();
     JLabel label = new JLabel();
 
+    JButton boton1 = new JButton();
     JButton boton2 = new JButton();
-    JButton boton3 = new JButton();
-    JButton boton4 = new JButton();
+
+
+
+
 
 
 
@@ -42,6 +44,8 @@ public class Ventana extends JFrame implements ActionListener {
 
         panelAbajoUI();
 
+
+
         this.setVisible(true);
         //this.pack();
         this.repaint();
@@ -61,26 +65,17 @@ public class Ventana extends JFrame implements ActionListener {
 
 
         for (int i = 0; i < numCuerposCelestes; i++) {
-            JLabel nuevoboton = new JLabel();
-            nuevoboton.setSize(10,10);
 
-            String nombre_imagen = Universo.galaxia[i].nombre_imagen;
-            String path_imagen = "src/imagenes/" + nombre_imagen;
-
-
-            //ImageIcon img = new ImageIcon("src/imagenes/planeta_03.jpg");
-            ImageIcon img = new ImageIcon(path_imagen);
-            Icon icono = new ImageIcon(img.getImage().getScaledInstance(nuevoboton.getWidth(), nuevoboton.getHeight(), Image.SCALE_DEFAULT));
-
-            nuevoboton.setIcon(img);
-
-            panel.add(nuevoboton);
-            nuevoboton.setVisible(true);
+            Boton nuevoBoton = new Boton(i);
+            panel.add(nuevoBoton);
+            nuevoBoton.setVisible(true);
         }
 
-        this.add(panel, BorderLayout.CENTER);
-
+        this.add(panel);
     }
+
+
+
 
     public void panelIzqUI (){
         JPanel panel = panelIzq;
@@ -122,7 +117,13 @@ public class Ventana extends JFrame implements ActionListener {
         //panel.setPreferredSize(new Dimension(850,200));
         panel.setBounds(0, 500, 500 , 200);
 
+        panelAbajo.add(labelInfo);
         this.add(panel);
+    }
+
+
+    public void textAbajo (){
+
 
     }
 
@@ -143,6 +144,5 @@ public class Ventana extends JFrame implements ActionListener {
 
 
     }
-
-
 }
+
