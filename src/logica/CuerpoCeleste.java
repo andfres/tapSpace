@@ -7,7 +7,9 @@ public class CuerpoCeleste {
     public String mostrarCoordenada() {
         return coordenada.toString();
     }
-
+    public String mostrarCoordenada2() {
+        return "<h1>Coordenada: " + coordenada.toString() + "</h1>";
+    }
     //Método para mostrar info detallada
 
     public String toString_detallado(){
@@ -65,14 +67,40 @@ class Planeta extends CuerpoCeleste{
     }
 
 
+//    public String toString_detallado() {
+//        return mostrarCoordenada() + "\r\n" +
+//                "Planeta" +
+//                "name: " + nombre + "\r\n" +
+//                "tipo: " + tipo_planeta_string[tipo_planeta] + "\r\n";
+//    }
+
     public String toString_detallado() {
-        return mostrarCoordenada() + "\r\n" +
-                "Planeta" +
-                "name: " + nombre + "\r\n" +
-                "tipo: " + tipo_planeta_string[tipo_planeta] + "\r\n";
+
+        String prueba = String.format("""
+            <html>
+            NOmbre planeta %s <br>
+            Planeta de tipo %s <br>
+            </html>
+            """,nombre,  tipo_planeta_string[tipo_planeta]  );
+
+        return prueba;
     }
 
 
+
+    public void prueba() {
+        String html = """
+              <html>
+                  <body>
+                      <p>Hello, world</p>
+                  </body>
+              </html>
+              """;
+
+        String prueba = String.format("""
+            Planeta de tipo %s tamaño %.2f
+            """, "gaseoso",  1.21212121212 );
+    }
 
 } //fin Planeta
 
@@ -89,6 +117,18 @@ class Asteroide extends CuerpoCeleste{
         return mostrarCoordenada() +"Asteroide";
     }
 
+
+    public String toString_detallado() {
+        String s = "";
+        s = s.concat("<html>");
+        s = s.concat(mostrarCoordenada2() + "<br>");
+        s = s.concat("Un simple asteroide");
+        s = s.concat("</html>");
+
+        return s;
+    }
+
+
 } //fin Asteroide
 
 /*********************************************************************/
@@ -102,6 +142,16 @@ class Vacio extends CuerpoCeleste{
     }
     public String toString() {
         return mostrarCoordenada() + "Vacío";
+    }
+
+    public String toString_detallado() {
+        String s = "";
+        s = s.concat("<html>");
+        s = s.concat(mostrarCoordenada2() + "<br>");
+        s = s.concat("Solo el vacío");
+        s = s.concat("</html>");
+
+        return s;
     }
 
 } //fin Asteroide

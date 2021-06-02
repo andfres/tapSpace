@@ -35,7 +35,7 @@ public class Ventana extends JFrame implements ActionListener {
 
         panelUniverso.setBounds(0,0,500,500);
         this.add(panelUniverso);
-        //panelCentroUI();
+
         panelDerechaUI();
         panelAbajoUI();
 

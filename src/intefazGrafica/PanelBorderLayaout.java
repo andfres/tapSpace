@@ -13,17 +13,24 @@ public class PanelBorderLayaout extends JPanel {
     JPanel paneleste = new JPanel();
     JPanel panelcentro = new JPanel();
 
+    private JButton botonNorte = new JButton();
+    JButton botonSur = new JButton();
+    JButton botonOeste = new JButton();
+    JButton botonEste= new JButton();
+
+
     PanelBorderLayaout(){
 
         this.setLayout(new BorderLayout());
-        //this.setBounds(0,0,500,500);
         this.setBackground(Color.yellow);
+
 
         panelNorteUI();
         panelSurUI();
         panelOesteUI();
         panelEsteUI();
         panelCentroUI();
+        botonesFlechas();
 
         this.setVisible(true);
     }
@@ -51,14 +58,14 @@ public class PanelBorderLayaout extends JPanel {
         this.add(panel, BorderLayout.WEST);
     }
     public void panelEsteUI (){
+
         JPanel panel = paneleste;
+
+
         panel.setBackground(color);
         panel.setPreferredSize(new Dimension(sizeA,sizeB));
         this.add(panel, BorderLayout.EAST);
     }
-
-
-
 
     public void panelCentroUI(){
         JPanel panel = panelcentro;
@@ -79,4 +86,33 @@ public class PanelBorderLayaout extends JPanel {
 
         this.add(panel, BorderLayout.CENTER);
     }
+
+    public void botonesFlechas(){
+
+        String path_imagen = "src/imagenes/flecha.png";
+        int sizeA = 100;
+        int sizeB = 25;
+        botonNorte.setSize(sizeA,sizeB);
+        botonSur.setSize(sizeA, sizeB);
+        botonEste.setSize(sizeB, sizeA);
+        botonOeste.setSize(sizeB, sizeA);
+
+
+        ImageIcon img = new ImageIcon(path_imagen);
+        Icon icono = new ImageIcon(img.getImage().getScaledInstance(botonNorte.getWidth(), botonNorte.getHeight(), Image.SCALE_DEFAULT));
+
+        botonNorte.setIcon(icono);
+        botonSur.setIcon(icono);
+        botonEste.setIcon(icono);
+        botonOeste.setIcon(icono);
+
+
+
+        panelnorte.add(botonNorte);
+        panelsur.add(botonSur);
+        paneleste.add(botonEste);
+        paneloeste.add(botonOeste);
+//
+    }
+
 }

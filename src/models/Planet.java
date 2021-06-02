@@ -1,5 +1,5 @@
 
-package org.andfres.models;
+package models;
 
 
 public class Planet {
