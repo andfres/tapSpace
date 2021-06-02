@@ -67,12 +67,6 @@ class Planeta extends CuerpoCeleste{
     }
 
 
-//    public String toString_detallado() {
-//        return mostrarCoordenada() + "\r\n" +
-//                "Planeta" +
-//                "name: " + nombre + "\r\n" +
-//                "tipo: " + tipo_planeta_string[tipo_planeta] + "\r\n";
-//    }
 
     public String toString_detallado() {
 
@@ -80,6 +74,7 @@ class Planeta extends CuerpoCeleste{
             <html>
             NOmbre planeta %s <br>
             Planeta de tipo %s <br>
+       
             </html>
             """,nombre,  tipo_planeta_string[tipo_planeta]  );
 
