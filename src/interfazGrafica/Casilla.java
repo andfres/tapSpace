@@ -1,6 +1,7 @@
 package interfazGrafica;
 
 import logica.Universo;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,12 +9,14 @@ public class Casilla extends JLabel  {
 
     public int num_casilla;
 
+
     public Casilla(int num_boton){
 
-        this.num_casilla = num_boton;
-        int tamano_aproximado = 450/ Universo.NUMxLado;
 
-        this.setSize(tamano_aproximado,tamano_aproximado);
+        this.num_casilla = num_boton;
+        int size = Ventana.SIZE_TOTAL_SS / Universo.NUMxLado;
+
+        this.setSize(size,size);
 
         String nombre_imagen = Universo.cuerpoCelestes[this.num_casilla].nombre_imagen;
         String path_imagen = "src/imagenes/" + nombre_imagen;
