@@ -10,6 +10,7 @@ public class Main {
 
         Universo.crear_galaxia();
         Ventana ventana = new Ventana();
+        System.out.println("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
     }
 }

@@ -1,6 +1,5 @@
 package logica;
 
-import interfazGrafica.Casilla;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,9 +7,9 @@ import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame implements ActionListener {
 
-    public final int SIZE_TOTAL_X = 30;
+    public final int SIZE_TOTAL_X = 0;
     public final int SIZE_TOTAL_Y = 700;
-    public final int SIZE_TOTAL_SS = 600;
+    public final int SIZE_TOTAL_SS = 0;
 
     JPanel panelSS = new JPanel();
     JPanel panelDerecha = new JPanel();
@@ -23,43 +22,42 @@ public class Ventana extends JFrame implements ActionListener {
 
 
 
-    public Ventana(){
-
-        this.setTitle("Tap Space");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(SIZE_TOTAL_X,SIZE_TOTAL_Y);
-
-        //this.setLocationRelativeTo(null);
-        this.setResizable(false);
-        this.setLayout(null);
-
-        panelSSUI();
-        panelDerechaUI();
-        panelAbajoUI();
-
-        this.setVisible(true);
-        //this.pack();
-        //this.repaint();
-    }
+//    public Ventana(){
+//
+//        this.setTitle("Tap Space");
+//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setSize(SIZE_TOTAL_X,SIZE_TOTAL_Y);
+//
+//        //this.setLocationRelativeTo(null);
+//        //this.setResizable(false);
+//        this.setLayout(null);
+//
+//        panelSSUI();
+//        panelDerechaUI();
+//        panelAbajoUI();
+//
+//        this.setVisible(true);
+//        //this.pack();
+//        //this.repaint();//    }
 
     public void panelSSUI(){
 
-        JPanel panel = panelSS;
-        panel.setBounds(0,0,SIZE_TOTAL_SS,SIZE_TOTAL_SS);
-        panel.setBackground(Color.red);
-
-        int numCuerposCelestes = Universo.cuerpoCelestes.length;
-        GridLayout grid = new GridLayout(Universo.NUMxLado,Universo.NUMxLado);
-        panel.setLayout(grid);
-
-        for (int i = 0; i < numCuerposCelestes; i++) {
-
-            Casilla nuevoCasilla = new Casilla(i);
-            panel.add(nuevoCasilla);
-            nuevoCasilla.setVisible(true);
-        }
-
-        this.add(panel);
+//        JPanel panel = panelSS;
+//        panel.setBounds(0,0,SIZE_TOTAL_SS,SIZE_TOTAL_SS);
+//        panel.setBackground(Color.red);
+//
+//        int numCuerposCelestes = Universo.cuerpoCelestes.length;
+//        GridLayout grid = new GridLayout(Universo.NUMxLado,Universo.NUMxLado);
+//        panel.setLayout(grid);
+//
+//        for (int i = 0; i < numCuerposCelestes; i++) {
+//
+//            Casilla nuevoCasilla = new Casilla(i);
+//            panel.add(nuevoCasilla);
+//            nuevoCasilla.setVisible(true);
+//        }
+//
+//        this.add(panel);
     }
 
 
