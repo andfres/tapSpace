@@ -10,8 +10,7 @@ public class Universo {
     private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
     private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //normal, basura, vacío
 
-    public static CuerpoCeleste [] galaxia = new CuerpoCeleste [NUMCUERPOS];
-
+    public static CuerpoCeleste [] cuerpoCelestes = new CuerpoCeleste [NUMCUERPOS];
     static ArrayList<Coordenada> coordenadas = new ArrayList<Coordenada>();
 
 
@@ -28,14 +27,14 @@ public class Universo {
 
 
     private static CuerpoCeleste generar_CuerpoCeleste (Coordenada cordenada){
-        int num = Funcionalidades.aletorizar(posiblidades_CuerposCelestes);
+        int num = Aleatorizador.aletorizar(posiblidades_CuerposCelestes);
         CuerpoCeleste cuerpo = new Vacio(cordenada);
         CuerpoCeleste nuevoCuerpo;
         switch (num){
             case 0: //Planeta
                 nuevoCuerpo = new Planeta(cordenada,
-                        Funcionalidades.generar_nombre_aleatorio(),
-                        Funcionalidades.aletorizar(posiblidades_planetas));
+                        Aleatorizador.generar_nombre_aleatorio(),
+                        Aleatorizador.aletorizar(posiblidades_planetas));
 
                 return nuevoCuerpo;
 
@@ -46,7 +45,6 @@ public class Universo {
             case 2: //Vacío
                 nuevoCuerpo = new Vacio(cordenada);
                 return nuevoCuerpo;
-
 
         }
 
@@ -61,10 +59,10 @@ public class Universo {
         crearCoordenadas();
         System.out.println(coordenadas.toString());
 
-        for (int x = 0; x < galaxia.length; x++) {
+        for (int x = 0; x < cuerpoCelestes.length; x++) {
             //System.out.println("creado cuerpo celeleste num " + x);
             CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(coordenadas.get(x));
-            galaxia[x] = nuevoCuerpo;
+            cuerpoCelestes[x] = nuevoCuerpo;
         }
 
         System.out.println("Cuerpos celestes instanciados");
@@ -76,8 +74,8 @@ public class Universo {
 
     public static void inspeccionar_galaxia(){
 
-        for (int x = 1; x < galaxia.length; x++) {
-            System.out.println(galaxia[x].toString());
+        for (int x = 1; x < cuerpoCelestes.length; x++) {
+            System.out.println(cuerpoCelestes[x].toString());
 
         }
 

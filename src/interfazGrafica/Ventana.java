@@ -1,4 +1,4 @@
-package intefazGrafica;
+package interfazGrafica;
 
 import logica.Universo;
 
@@ -56,7 +56,7 @@ public class Ventana extends JFrame implements ActionListener {
 //
 //        for (int i = 0; i < numCuerposCelestes; i++) {
 //
-//            Boton nuevoBoton = new Boton(i);
+//            Casilla nuevoBoton = new Casilla(i);
 //            panel.add(nuevoBoton);
 //            nuevoBoton.setVisible(true);
 //        }

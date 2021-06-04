@@ -1,7 +1,7 @@
 package main;
 
 import logica.Universo;
-import intefazGrafica.Ventana;
+import interfazGrafica.Ventana;
 
 public class Main {
 

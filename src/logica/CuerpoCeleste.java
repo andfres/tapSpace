@@ -13,7 +13,7 @@ public class CuerpoCeleste {
     //Método para mostrar info detallada
 
     public String toString_detallado(){
-        return "tengo que sobrescribir este método";
+        return "método sobreescrito";
     }
 
 }
@@ -32,7 +32,7 @@ class Planeta extends CuerpoCeleste{
          {"planeta_01.jpg" , "planeta_05.jpg", "planeta_12.jpg", "planeta_13.jpg" },
          {"planeta_10.jpg" , "planeta_11.jpg" }};
 
-    private String [] tipo_planeta_string = {"planetas_roca" , "planetas_agua" , "planetas_bosque", "planetas_fuego"};
+    private String [] tipo_planeta_string = {"Roca" , "Agua" , "bosque", "Fuego"};
 
     //Constructor
     public Planeta(Coordenada coordenada, String nombre, int tipo_planeta) {
@@ -49,7 +49,7 @@ class Planeta extends CuerpoCeleste{
     public String elegirFoto(){
 
         int size = array_nombres_fotos[tipo_planeta].length;
-        int num = Funcionalidades.int_aleatorio(0,size);
+        int num = Aleatorizador.int_aleatorio(0,size);
         System.out.println("tamaño array" +size);
 
         //System.out.println("eligiendo planteta:" + num);
@@ -70,32 +70,19 @@ class Planeta extends CuerpoCeleste{
 
     public String toString_detallado() {
 
-        String prueba = String.format("""
+        String s = String.format("""
             <html>
-            NOmbre planeta %s <br>
-            Planeta de tipo %s <br>
-       
+                %s
+                <p>Planeta <span style="font-size: 20"> %s </span>  </p>
+                <p>Bioma de tipo <span style="font-size: 20"> %s </span>  </p>
             </html>
-            """,nombre,  tipo_planeta_string[tipo_planeta]  );
+            
+            """,mostrarCoordenada2(), nombre,  tipo_planeta_string[tipo_planeta]  );
 
-        return prueba;
+        return s;
     }
 
 
-
-    public void prueba() {
-        String html = """
-              <html>
-                  <body>
-                      <p>Hello, world</p>
-                  </body>
-              </html>
-              """;
-
-        String prueba = String.format("""
-            Planeta de tipo %s tamaño %.2f
-            """, "gaseoso",  1.21212121212 );
-    }
 
 } //fin Planeta
 
@@ -114,12 +101,12 @@ class Asteroide extends CuerpoCeleste{
 
 
     public String toString_detallado() {
-        String s = "";
-        s = s.concat("<html>");
-        s = s.concat(mostrarCoordenada2() + "<br>");
-        s = s.concat("Un simple asteroide");
-        s = s.concat("</html>");
-
+        String s = String.format("""
+            <html>
+                %s
+                <p style="font-size: 16"> Un simple asteroide. </p>
+            </html>
+            """,mostrarCoordenada2() );
         return s;
     }
 
@@ -139,13 +126,14 @@ class Vacio extends CuerpoCeleste{
         return mostrarCoordenada() + "Vacío";
     }
 
-    public String toString_detallado() {
-        String s = "";
-        s = s.concat("<html>");
-        s = s.concat(mostrarCoordenada2() + "<br>");
-        s = s.concat("Solo el vacío");
-        s = s.concat("</html>");
 
+    public String toString_detallado() {
+        String s = String.format("""
+            <html>
+                %s
+                <p style="font-size: 16"> Sólo el vacío.</p>
+            </html>
+            """,mostrarCoordenada2() );
         return s;
     }
 

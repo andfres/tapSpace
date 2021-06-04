@@ -1,22 +1,21 @@
-package intefazGrafica;
+package interfazGrafica;
 
 import logica.Universo;
-
 import javax.swing.*;
 import java.awt.*;
 
-public class Boton extends JLabel  {
+public class Casilla extends JLabel  {
 
-    private int num_boton;
+    public int num_casilla;
 
-    Boton(int num_boton){
+    public Casilla(int num_boton){
 
-        this.num_boton = num_boton;
-        int tamaño_aproxiado = 450/ Universo.NUMxLado;
+        this.num_casilla = num_boton;
+        int tamano_aproximado = 450/ Universo.NUMxLado;
 
-        this.setSize(tamaño_aproxiado,tamaño_aproxiado);
+        this.setSize(tamano_aproximado,tamano_aproximado);
 
-        String nombre_imagen = Universo.galaxia[this.num_boton].nombre_imagen;
+        String nombre_imagen = Universo.cuerpoCelestes[this.num_casilla].nombre_imagen;
         String path_imagen = "src/imagenes/" + nombre_imagen;
 
         ImageIcon img = new ImageIcon(path_imagen);
@@ -30,6 +29,7 @@ public class Boton extends JLabel  {
         this.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
+
                 //System.out.println("Has hecho click en " + nombre_imagen);
                 //System.out.println(Universo.galaxia[num_boton].toString());
 
@@ -42,7 +42,7 @@ public class Boton extends JLabel  {
             public void mouseEntered(java.awt.event.MouseEvent e){
 
                 //String info = Universo.galaxia[num_boton].toString();
-                String info = Universo.galaxia[num_boton].toString_detallado();
+                String info = Universo.cuerpoCelestes[num_boton].toString_detallado();
                 //System.out.println(info);
                 imprimir(Ventana.labelInfo, info);
             }
@@ -57,8 +57,5 @@ public class Boton extends JLabel  {
     }
 
 }//fin clase
-
-
-
 
 

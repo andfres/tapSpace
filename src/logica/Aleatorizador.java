@@ -1,6 +1,6 @@
 package logica;
 
-public class Funcionalidades {
+public class Aleatorizador {
 
     static final String letras = "bcdfghjklmpkrstvwyxyz";
     static final String vocales = "aeiou" ;
