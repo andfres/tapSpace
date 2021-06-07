@@ -1,6 +1,6 @@
-package interfazGrafica;
+package  org.andfres.interfazGrafica;
 
-import logica.Universo;
+import org.andfres.logica.Universo;
 
 import javax.swing.*;
 import java.awt.*;

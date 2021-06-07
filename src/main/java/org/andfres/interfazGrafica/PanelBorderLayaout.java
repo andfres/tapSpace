@@ -1,6 +1,6 @@
-package interfazGrafica;
+package org.andfres.interfazGrafica;
 
-import logica.Universo;
+import org.andfres.logica.Universo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -83,7 +83,7 @@ class BotonFlechasCardinales extends JLabel{
     BotonFlechasCardinales(String imagen, int X , int Y){
         this.setSize(X,Y);
         this.setBackground(Color.black);
-        ImageIcon img = new ImageIcon("src/imagenes/" + imagen);
+        ImageIcon img = new ImageIcon("src/main/java/org/andfres/imagenes/" + imagen);
         Icon icono = new ImageIcon(img.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
         this.setIcon(icono);
     }

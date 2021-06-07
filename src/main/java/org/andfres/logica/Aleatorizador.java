@@ -1,4 +1,5 @@
-package logica;
+package org.andfres.logica;
+
 
 public class Aleatorizador {
 

@@ -1,6 +1,7 @@
-package interfazGrafica;
+package org.andfres.interfazGrafica;
 
-import logica.Universo;
+import org.andfres.logica.Universo;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +20,7 @@ public class Casilla extends JLabel  {
         this.setSize(size,size);
 
         String nombre_imagen = Universo.cuerpoCelestes[this.num_casilla].nombre_imagen;
-        String path_imagen = "src/imagenes/" + nombre_imagen;
+        final String path_imagen = "src/main/java/org/andfres/imagenes/" + nombre_imagen;
 
         ImageIcon img = new ImageIcon(path_imagen);
         Icon icono = new ImageIcon(img.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));

@@ -1,4 +1,4 @@
-package logica;
+package org.andfres.logica;
 
 import java.util.ArrayList;
 
