@@ -4,7 +4,7 @@
 1. Crear las tablas de los cuerpos celestes (CC)
 1. Establecer conexión y métodos pertinentes
 1. Refactorizar para que las coordenadas solo se creen una vez
-
+1. Añadir listener para botones
 
 
 
