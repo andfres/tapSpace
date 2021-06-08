@@ -29,6 +29,28 @@ public class Casilla extends JLabel  {
         int ancho = this.getWidth();
         int alto = this.getHeight();
 
+
+        java.awt.event.MouseAdapter listener = new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+
+                //System.out.println("Has hecho click en " + nombre_imagen);
+                //System.out.println(Universo.galaxia[num_boton].toString());
+
+                String info = "dimensiones del botón  \n  ancho: " +ancho + " alto: " + alto;
+                imprimir(Ventana.labelInfo, info);
+            }
+
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e){
+
+                String info = Universo.cuerpoCelestes[num_boton].toString_detallado();
+                imprimir(Ventana.labelInfo, info);
+            }
+        };
+        this.addMouseListener(listener);
+
+        /*
         this.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
@@ -48,6 +70,7 @@ public class Casilla extends JLabel  {
             }
 
         });//fin this.addMouseListener
+        */
 
     }//fin constructor
 

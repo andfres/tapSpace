@@ -21,10 +21,10 @@ public class PanelBorderLayaout extends JPanel {
 
     JPanel panelcentro;
 
-    BotonFlechasCardinales botonNorte = new BotonFlechasCardinales  (1, "flecha_N.png", sizeC, sizeD);
-    BotonFlechasCardinales botonSur = new BotonFlechasCardinales  (2, "flecha_S.png", sizeC, sizeD);
-    BotonFlechasCardinales botonOeste = new BotonFlechasCardinales  (3, "flecha_O.png", sizeD, sizeC);
-    BotonFlechasCardinales botonEste = new BotonFlechasCardinales  (4, "flecha_E.png", sizeD, sizeC);
+    BotonFlechasCardinales botonNorte = new BotonFlechasCardinales  (this, 1, "flecha_N.png", sizeC, sizeD);
+    BotonFlechasCardinales botonSur = new BotonFlechasCardinales  (this, 2, "flecha_S.png", sizeC, sizeD);
+    BotonFlechasCardinales botonOeste = new BotonFlechasCardinales  (this, 3, "flecha_O.png", sizeD, sizeC);
+    BotonFlechasCardinales botonEste = new BotonFlechasCardinales  (this, 4, "flecha_E.png", sizeD, sizeC);
 
 
     PanelBorderLayaout(){
@@ -90,14 +90,16 @@ class PanelBorde extends  JLabel{
     }
 }
 
-class BotonFlechasCardinales extends JLabel{
+class BotonFlechasCardinales extends JLabel {
 
+    PanelBorderLayaout parent;
     private int IDboton;
     BotonFlechasCardinales boton = this;
     Color color = Color.darkGray;
 
-    BotonFlechasCardinales(int IDboton, String imagen, int X , int Y){
+    BotonFlechasCardinales(PanelBorderLayaout parent, int IDboton, String imagen, int X , int Y){
 
+        this.parent = parent;
         this.IDboton = IDboton;
         this.setSize(X,Y);
 
@@ -159,6 +161,9 @@ class BotonFlechasCardinales extends JLabel{
 
                 break;
         }
+
+
+        this.parent.refrescar();
 
     }
 
