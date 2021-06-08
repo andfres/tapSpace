@@ -39,3 +39,70 @@ mvn package && java -jar target/planetas-1.0-SNAPSHOT.jar
 sqlitebrowser
 ```
 
+
+
+
+
+```java
+
+
+SistemaSolar {
+
+
+    Planeta/CuerpoCeleste planetas[];
+
+
+
+}
+
+Galaxia/Universo {
+
+    int x, y;
+
+    SistemaSolar sistemaActual(){
+
+        // Cargas de BD
+
+    }
+
+    irA(x, y){
+        this.x = x; this.y = y;
+    }
+
+
+}
+
+// En el main o algo global
+galaxia = new GAlaxia();
+
+
+// En el listener del boton
+ss = galaxia.actual();
+ss[0].veces_visitos++;
+ss[0].save();
+galaxia.irA(x+1, y);
+refrescar();
+
+
+// Método del panel
+refrescar() {
+
+
+
+    SistemaSolar ss = galaxia.actual();
+
+    for( cuerpo: ss.cuerpos ){
+        New JFrames/labels
+    }
+}
+
+
+
+
+
+
+
+
+
+
+```
