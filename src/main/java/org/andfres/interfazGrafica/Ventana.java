@@ -9,14 +9,12 @@ import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame implements ActionListener {
 
-
     public final int SIZE_TOTAL_X = 800;
     public final int SIZE_TOTAL_Y = 800;
     public static final int SIZE_TOTAL_SS = 600;
 
     JPanel panelDerecha = new JPanel();
     JPanel panelAbajo = new JPanel();
-    //JPanel panelCental = new JPanel();
 
     PanelBorderLayaout panelUniverso = new PanelBorderLayaout();
 
@@ -38,12 +36,13 @@ public class Ventana extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setLayout(null);
 
-        //panelUniverso.setBounds(0,0,500,500);
 
         panelUniverso.setBounds(0,0,SIZE_TOTAL_SS,SIZE_TOTAL_SS);
         this.add(panelUniverso);
         panelDerechaUI();
         panelAbajoUI();
+
+        //refrescarSS();
 
         this.setVisible(true);
         this.repaint();
@@ -55,10 +54,11 @@ public class Ventana extends JFrame implements ActionListener {
         JPanel panel = panelDerecha;
         panel.setBackground(Color.cyan);
 
-        //panel.setBounds(500,0,200,700);
         panel.setBounds(SIZE_TOTAL_SS,0,SIZE_TOTAL_X - SIZE_TOTAL_SS,SIZE_TOTAL_Y);
 
         this.add(panel);
+
+        //botones
         Dimension dboton = new Dimension();
         dboton.setSize(150, 50);
 
@@ -67,11 +67,10 @@ public class Ventana extends JFrame implements ActionListener {
 
         boton1.setText("Crear Universo");
         boton2.setText("Tamaño medio ");
-        boton3.setText("soy tontito ");
+
 
         boton1.addActionListener(this);
         boton2.addActionListener(this);
-        boton3.addActionListener(this);
 
         panelDerecha.add(boton1);
         panelDerecha.add(boton2);
@@ -81,13 +80,10 @@ public class Ventana extends JFrame implements ActionListener {
 
 
     public void panelAbajoUI (){
-
         JPanel panel = panelAbajo;
         panel.setLayout(null);
         panel.setBackground(Color.magenta);
-        //panel.setBounds(0, 500, 500 , 200);
         panel.setBounds(0,SIZE_TOTAL_SS,SIZE_TOTAL_SS ,SIZE_TOTAL_Y- SIZE_TOTAL_SS);
-
 
         // Panel Verde
         labelInfo.setVerticalTextPosition(JLabel.TOP);
@@ -107,7 +103,8 @@ public class Ventana extends JFrame implements ActionListener {
         if(e.getSource()==boton1) {
             System.out.println("creando uni");
             Universo.crear_galaxia();
-            this.repaint();
+            panelUniverso.refrescar();
+
         }
 
         if(e.getSource()==boton2) {

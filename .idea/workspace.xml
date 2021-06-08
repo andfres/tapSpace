@@ -5,58 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0ab0178-6c9a-4bb0-9361-f28adc0b838b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/asteroide.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/asteroide.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/flecha.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/flecha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/flecha_E.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/flecha_E.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/flecha_N.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/flecha_N.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/flecha_O.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/flecha_O.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/flecha_S.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/flecha_S.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_07.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_08.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/planeta_18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/planeta_18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imagenes/void.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/imagenes/void.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfazGrafica/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfazGrafica/PanelBorderLayaout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/PanelBorderLayaout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfazGrafica/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logica/Aleatorizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Aleatorizador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logica/Coordenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logica/CuerpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logica/SistemaSolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logica/Universo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Universo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tapSpace.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystem.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/PanelBorderLayaout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/PanelBorderLayaout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/BaseDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tapSpace2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tapSpace2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/BotonFlechasCardinales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/BotonFlechasCardinales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/Casilla$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/Casilla$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/Casilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/Casilla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/PanelBorde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/PanelBorde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/PanelBorderLayaout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/andfres/interfazGrafica/PanelBorderLayaout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tdVPjJluyBcTA0rW7mD5hL3Eoi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,6 +49,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fresno\IdeaProjects\tapSpace" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -95,5 +92,21 @@
       <updated>1623098935337</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

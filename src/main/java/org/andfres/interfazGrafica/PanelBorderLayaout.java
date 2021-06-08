@@ -1,9 +1,11 @@
 package org.andfres.interfazGrafica;
 
 import org.andfres.logica.Universo;
+import org.andfres.logica.Global;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class PanelBorderLayaout extends JPanel {
 
@@ -17,15 +19,13 @@ public class PanelBorderLayaout extends JPanel {
     PanelBorde paneloeste = new PanelBorde(sizeB, sizeA);
     PanelBorde paneleste = new PanelBorde(sizeB, sizeA);
 
-    JPanel panelcentro = new JPanel(new GridBagLayout());
+    JPanel panelcentro;
 
+    BotonFlechasCardinales botonNorte = new BotonFlechasCardinales  (1, "flecha_N.png", sizeC, sizeD);
+    BotonFlechasCardinales botonSur = new BotonFlechasCardinales  (2, "flecha_S.png", sizeC, sizeD);
+    BotonFlechasCardinales botonOeste = new BotonFlechasCardinales  (3, "flecha_O.png", sizeD, sizeC);
+    BotonFlechasCardinales botonEste = new BotonFlechasCardinales  (4, "flecha_E.png", sizeD, sizeC);
 
-    BotonFlechasCardinales botonNorte = new BotonFlechasCardinales  ("flecha_N.png", sizeC, sizeD);
-    BotonFlechasCardinales botonSur = new BotonFlechasCardinales  ("flecha_S.png", sizeC, sizeD);
-    BotonFlechasCardinales botonOeste = new BotonFlechasCardinales  ("flecha_O.png", sizeD, sizeC);
-    BotonFlechasCardinales botonEste = new BotonFlechasCardinales  ("flecha_E.png", sizeD, sizeC);
-
-    //GridBagConstraints c = new GridBagConstraints();
 
     PanelBorderLayaout(){
 
@@ -47,8 +47,20 @@ public class PanelBorderLayaout extends JPanel {
         this.setVisible(true);
     }
 
+    public void refrescar(){
+
+        this.remove(panelcentro);
+        panelCentroUI();
+        this.validate();
+        this.repaint();
+
+    }
+
 
     public void panelCentroUI(){
+
+        this.panelcentro = new JPanel(new GridBagLayout());
+
         JPanel panel = panelcentro;
         panel.setBackground(Color.red);
         int numCuerposCelestes = Universo.cuerpoCelestes.length;
@@ -80,13 +92,76 @@ class PanelBorde extends  JLabel{
 
 class BotonFlechasCardinales extends JLabel{
 
-    BotonFlechasCardinales(String imagen, int X , int Y){
+    private int IDboton;
+    BotonFlechasCardinales boton = this;
+    Color color = Color.darkGray;
+
+    BotonFlechasCardinales(int IDboton, String imagen, int X , int Y){
+
+        this.IDboton = IDboton;
         this.setSize(X,Y);
-        this.setBackground(Color.black);
-        ImageIcon img = new ImageIcon("src/main/java/org/andfres/imagenes/" + imagen);
+
+        ImageIcon img = new ImageIcon(Global.rutaImagenes + imagen);
         Icon icono = new ImageIcon(img.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
         this.setIcon(icono);
+
+        this.setOpaque(true);
+        this.setBackground(color);
+
+        this.addMouseListener(new java.awt.event.MouseAdapter() {
+
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e){
+                boton.setBackground(Color.lightGray);
+                cambiarCordenadasSS();
+            }
+            @Override
+            public void mouseReleased(java.awt.event.MouseEvent e){
+
+                try {
+                    TimeUnit.MILLISECONDS.sleep(200);
+                    boton.setBackground(color);
+                } catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
+                }
+            }
+
+        });//fin this.addMouseListener
+
+    } // Fin constructor
+
+
+    private static void imprimir (JLabel label , String info){
+        label.setText(info);
     }
+
+    private void cambiarCordenadasSS (){
+
+        switch (this.IDboton){
+            case 1:
+                imprimir(Ventana.labelInfo, "apretaste boton arriba");
+               //panelUniverso.refrescar();
+
+                break;
+
+            case 2:
+                imprimir(Ventana.labelInfo, "apretaste boton abajo");
+
+                break;
+
+            case 3:
+                imprimir(Ventana.labelInfo, "apretaste boton izquierda");
+
+                break;
+
+            case 4:
+                imprimir(Ventana.labelInfo, "apretaste boton derecha");
+
+                break;
+        }
+
+    }
+
 
 } //Fin BotonFlechasCardinales
 

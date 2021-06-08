@@ -2,6 +2,7 @@ package org.andfres;
 
 import org.andfres.interfazGrafica.Ventana;
 import org.andfres.logica.Universo;
+import org.andfres.logica.BaseDatos;
 
 public class App {
 
@@ -10,7 +11,14 @@ public class App {
 
         Universo.crear_galaxia();
         Ventana ventana = new Ventana();
-        System.out.println("holaaa");
+
+
+        BaseDatos ssdb = new BaseDatos();
+
+        ssdb.borrarTablas();
+        ssdb.crearTablas();
+
+
 
     }
 }

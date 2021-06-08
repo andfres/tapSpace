@@ -1,6 +1,7 @@
 package org.andfres.interfazGrafica;
 
 import org.andfres.logica.Universo;
+import org.andfres.logica.Global;
 
 
 import javax.swing.*;
@@ -10,9 +11,7 @@ public class Casilla extends JLabel  {
 
     public int num_casilla;
 
-
     public Casilla(int num_boton){
-
 
         this.num_casilla = num_boton;
         int size = Ventana.SIZE_TOTAL_SS / Universo.NUMxLado;
@@ -20,7 +19,7 @@ public class Casilla extends JLabel  {
         this.setSize(size,size);
 
         String nombre_imagen = Universo.cuerpoCelestes[this.num_casilla].nombre_imagen;
-        final String path_imagen = "src/main/java/org/andfres/imagenes/" + nombre_imagen;
+        final String path_imagen = Global.rutaImagenes + nombre_imagen;
 
         ImageIcon img = new ImageIcon(path_imagen);
         Icon icono = new ImageIcon(img.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));
@@ -37,17 +36,14 @@ public class Casilla extends JLabel  {
                 //System.out.println("Has hecho click en " + nombre_imagen);
                 //System.out.println(Universo.galaxia[num_boton].toString());
 
-                String cadena = "dimensiones del botón  \n  ancho: " +ancho + " alto: " + alto;
-
-                imprimir(Ventana.labelInfo, cadena);
+                String info = "dimensiones del botón  \n  ancho: " +ancho + " alto: " + alto;
+                imprimir(Ventana.labelInfo, info);
             }
 
             @Override
             public void mouseEntered(java.awt.event.MouseEvent e){
 
-                //String info = Universo.galaxia[num_boton].toString();
                 String info = Universo.cuerpoCelestes[num_boton].toString_detallado();
-                //System.out.println(info);
                 imprimir(Ventana.labelInfo, info);
             }
 
