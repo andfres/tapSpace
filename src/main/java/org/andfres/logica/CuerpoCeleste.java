@@ -40,7 +40,6 @@ class Planeta extends CuerpoCeleste{
         super.coordenada = coordenada;
         this.nombre = nombre;
         this.tipo_planeta = tipo_planeta;
-
         super.nombre_imagen = elegirFoto();
 
     }
@@ -50,10 +49,6 @@ class Planeta extends CuerpoCeleste{
 
         int size = array_nombres_fotos[tipo_planeta].length;
         int num = Aleatorizador.int_aleatorio(0,size);
-        System.out.println("tamaño array" +size);
-
-        //System.out.println("eligiendo planteta:" + num);
-
         return array_nombres_fotos[tipo_planeta][num];
     }
 

@@ -2,40 +2,25 @@ package org.andfres.logica;
 
 public class SistemaSolar {
 
-    Integer id;
+    //Integer id;
     static int xAnterior;
     static int yAnterior;
 
     int x;
     int y;
 
+    public CuerpoCeleste [] cuerpoCelestes;
 
-    public SistemaSolar(int id, int x, int y){
-        this.id = id;
-        this.x = x;
-        this.y = y;
-    }
-
-    public SistemaSolar(int x, int y){
-        this.id = null;
-        this.x = x;
-        this.y = y;
+    public SistemaSolar(int cambioCordenadaX , int cambioCordenadaY){
+        this.x = xAnterior+cambioCordenadaX;
+        this.y = yAnterior+cambioCordenadaY;
+        this.cuerpoCelestes = CuerposCelestesGenerador.crear_SS();
     }
 
 
-    public SistemaSolar generarSistemaSolar  (int cambioCordenadaX , int cambioCordenadaY){
-
-        SistemaSolar nuevoSistemaSolar = new SistemaSolar (
-                this.xAnterior+cambioCordenadaX ,
-                this.yAnterior+cambioCordenadaY);
-
-        return nuevoSistemaSolar;
-    }
 
 
-    public Integer getId(){
-        return this.id;
-    }
+
 
     public int getX(){
         return this.x;
@@ -48,22 +33,18 @@ public class SistemaSolar {
 
 
     public String toString(){
-        return "SS[" + this.x + "," + this.y + "] ";
+        return "  SS [" + this.x + " , " + this.y + "] ";
 
     }
+
+
+
+    public void inspeccionar_galaxia(){
+
+        for (int x = 1; x < cuerpoCelestes.length; x++) {
+            System.out.println(cuerpoCelestes[x].toString());
+
+        }
+
+    }//fin inspeccionar
 }
-//
-//class GenerarSistemaSolar{
-//
-//    int x;
-//    int y;
-//
-//    GenerarSistemaSolar(int x, int y){
-//        this.x = x;
-//        this.y = y;
-//
-//    }
-//
-//    public
-//
-//}

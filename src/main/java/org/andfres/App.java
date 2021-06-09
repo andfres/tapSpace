@@ -1,7 +1,7 @@
 package org.andfres;
 
 import org.andfres.interfazGrafica.Ventana;
-import org.andfres.logica.Universo;
+import org.andfres.logica.CuerposCelestesGenerador;
 import org.andfres.logica.BaseDatos;
 
 public class App {
@@ -9,7 +9,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        Universo.crear_galaxia();
+        CuerposCelestesGenerador.crear_SS();
         Ventana ventana = new Ventana();
 
 

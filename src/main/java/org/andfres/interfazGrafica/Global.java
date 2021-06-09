@@ -1,4 +1,4 @@
-package org.andfres.logica;
+package org.andfres.interfazGrafica;
 
 public class Global {
 

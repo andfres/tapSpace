@@ -1,6 +1,7 @@
 package  org.andfres.interfazGrafica;
 
-import org.andfres.logica.Universo;
+import org.andfres.logica.CuerposCelestesGenerador;
+import org.andfres.logica.SistemaSolar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +17,7 @@ public class Ventana extends JFrame implements ActionListener {
     JPanel panelDerecha = new JPanel();
     JPanel panelAbajo = new JPanel();
 
-    PanelBorderLayaout panelUniverso = new PanelBorderLayaout();
+    VentanaContenedorPanelBorder panelUniverso = new VentanaContenedorPanelBorder();
 
     public static JLabel labelInfo = new JLabel();
     JLabel labelInfo2 = new JLabel();
@@ -101,9 +102,9 @@ public class Ventana extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==boton1) {
-            System.out.println("creando uni");
-            Universo.crear_galaxia();
-            panelUniverso.refrescar();
+//            System.out.println("creando uni");
+//            CuerposCelestesGenerador.crear_SS();
+//            panelUniverso.refrescar(new SistemaSolar(2,2));
 
         }
 
