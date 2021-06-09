@@ -50,8 +50,7 @@ public class BaseDatos {
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
                         x INTEGER,
                         y INTEGER);
-                        
-                       
+              
                     """;
 
             stmt.executeUpdate(sql);
