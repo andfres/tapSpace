@@ -11,17 +11,17 @@ import java.awt.*;
 public class Casilla extends JLabel  {
 
     public int num_casilla;
+    private Ventana ventana;
 
-    public Casilla(int num_boton , CuerpoCeleste cuerpoCeleste){
+    public Casilla(Ventana ventana, int num_boton , CuerpoCeleste cuerpoCeleste){
 
+        this.ventana = ventana;
         this.num_casilla = num_boton;
         int size = Ventana.SIZE_TOTAL_SS / CuerposCelestesGenerador.NUMxLado;
 
         this.setSize(size,size);
 
 
-
-//        String nombre_imagen = sistemaSolar.cuerpoCelestes[this.num_casilla].nombre_imagen;
         final String path_imagen = Global.rutaImagenes + cuerpoCeleste.nombre_imagen;
 
         ImageIcon img = new ImageIcon(path_imagen);
@@ -41,14 +41,14 @@ public class Casilla extends JLabel  {
                 //System.out.println(Universo.galaxia[num_boton].toString());
 
                 String info = "dimensiones del botón  \n  ancho: " +ancho + " alto: " + alto;
-                imprimir(Ventana.labelInfo, info);
+                imprimir(ventana.panelAbajo.labelInfo,  info);
             }
 
             @Override
             public void mouseEntered(java.awt.event.MouseEvent e){
 
                 String info = cuerpoCeleste.toString_detallado();
-                imprimir(Ventana.labelInfo, info);
+                imprimir(ventana.panelAbajo.labelInfo, info);
             }
         };
 

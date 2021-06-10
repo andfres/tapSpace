@@ -1,33 +1,28 @@
 package  org.andfres.interfazGrafica;
 
-import org.andfres.logica.CuerposCelestesGenerador;
-import org.andfres.logica.SistemaSolar;
-
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class Ventana extends JFrame implements ActionListener {
+public class Ventana extends JFrame   {
+
+
 
     public final int SIZE_TOTAL_X = 800;
-    public final int SIZE_TOTAL_Y = 800;
+    public final int SIZE_TOTAL_Y = 850;
     public static final int SIZE_TOTAL_SS = 600;
 
-    JPanel panelDerecha = new JPanel();
-    JPanel panelAbajo = new JPanel();
 
-    VentanaContenedorPanelBorder panelUniverso = new VentanaContenedorPanelBorder();
-
-    public static JLabel labelInfo = new JLabel();
-    JLabel labelInfo2 = new JLabel();
-
-    JButton boton1 = new JButton();
-    JButton boton2 = new JButton();
-    JButton boton3 = new JButton();
+    VPanelDerecho panelDerecho;
+    VPanelAbajo panelAbajo;
+    VPanelSS panelUniverso;
 
 
     public Ventana(){
+
+        //El orden de la creación de objetos es importante - NO cambiar
+
+        panelDerecho = new VPanelDerecho(this);
+        panelAbajo = new VPanelAbajo(this);
+        panelUniverso = new VPanelSS(this);
 
         this.setTitle("Tap Space");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,87 +32,11 @@ public class Ventana extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setLayout(null);
 
-
         panelUniverso.setBounds(0,0,SIZE_TOTAL_SS,SIZE_TOTAL_SS);
         this.add(panelUniverso);
-        panelDerechaUI();
-        panelAbajoUI();
-
-        //refrescarSS();
 
         this.setVisible(true);
-        this.repaint();
-    }
 
-
-
-    public void panelDerechaUI (){
-        JPanel panel = panelDerecha;
-        panel.setBackground(Color.cyan);
-
-        panel.setBounds(SIZE_TOTAL_SS,0,SIZE_TOTAL_X - SIZE_TOTAL_SS,SIZE_TOTAL_Y);
-
-        this.add(panel);
-
-        //botones
-        Dimension dboton = new Dimension();
-        dboton.setSize(150, 50);
-
-        boton1.setSize(dboton);
-        boton2.setSize(dboton);
-
-        boton1.setText("Crear Universo");
-        boton2.setText("Tamaño medio ");
-
-
-        boton1.addActionListener(this);
-        boton2.addActionListener(this);
-
-        panelDerecha.add(boton1);
-        panelDerecha.add(boton2);
-        panelDerecha.add(boton3);
-
-    }
-
-
-    public void panelAbajoUI (){
-        JPanel panel = panelAbajo;
-        panel.setLayout(null);
-        panel.setBackground(Color.magenta);
-        panel.setBounds(0,SIZE_TOTAL_SS,SIZE_TOTAL_SS ,SIZE_TOTAL_Y- SIZE_TOTAL_SS);
-
-        // Panel Verde
-        labelInfo.setVerticalTextPosition(JLabel.TOP);
-        labelInfo.setHorizontalTextPosition(JLabel.LEFT);
-        labelInfo.setSize(450, 100);
-        labelInfo.setBackground(Color.green);
-        panelAbajo.add(labelInfo);
-        labelInfo.setVisible(true);
-        labelInfo.setOpaque(true);
-
-        this.add(panel);
-    }
-
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==boton1) {
-//            System.out.println("creando uni");
-//            CuerposCelestesGenerador.crear_SS();
-//            panelUniverso.refrescar(new SistemaSolar(2,2));
-
-        }
-
-        if(e.getSource()==boton2) {
-
-            //boton2.setText("alto: " + panelCental.getHeight() + "\r ancho: " + panelCental.getWidth()) ;
-        }
-
-        if(e.getSource()==boton3) {
-
-            //boton3.setText("alto: " + panelAbajo.getHeight() + "\r ancho: " + panelAbajo.getWidth()) ;
-            boton3.setText("alto: " + labelInfo.getHeight() + "\r ancho: " + labelInfo.getWidth()) ;
-        }
     }
 }
 

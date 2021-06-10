@@ -1,35 +1,46 @@
 package org.andfres.interfazGrafica;
 
+import org.andfres.database.Cargar_o_Generar_SistemaSolar;
 import org.andfres.logica.CuerposCelestesGenerador;
 import org.andfres.logica.SistemaSolar;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class VentanaContenedorPanelBorder extends JPanel {
+public class VPanelSS extends JPanel {
 
-    SistemaSolar sistemaSolar = new SistemaSolar(0,0);
+
+    SistemaSolar sistemaSolar = Cargar_o_Generar_SistemaSolar.cargarPrimerPlaneta();
+    //SistemaSolar sistemaSolar = new SistemaSolar(0,0, "el primero");
     //recoger de la base de datos el ultimo sistema solar
+
+
+
+    private Ventana ventana;
+    JLabel panelInfo;
 
     int sizeA = 450;
     int sizeB = 50;
     int sizeC = 300;
     int sizeD = 30;
 
-    VentanaPanelBorde panelnorte = new VentanaPanelBorde(sizeA, sizeB);
-    VentanaPanelBorde panelsur = new VentanaPanelBorde(sizeA, sizeB);
-    VentanaPanelBorde paneloeste = new VentanaPanelBorde(sizeB, sizeA);
-    VentanaPanelBorde paneleste = new VentanaPanelBorde(sizeB, sizeA);
+    VSSPanelBorde panelnorte = new VSSPanelBorde(sizeA, sizeB);
+    VSSPanelBorde panelsur = new VSSPanelBorde(sizeA, sizeB);
+    VSSPanelBorde paneloeste = new VSSPanelBorde(sizeB, sizeA);
+    VSSPanelBorde paneleste = new VSSPanelBorde(sizeB, sizeA);
 
     JPanel panelcentro;
 
-    VentanaBotonFlechasCardinales botonNorte = new VentanaBotonFlechasCardinales(this, 1, "flecha_N.png", sizeC, sizeD);
-    VentanaBotonFlechasCardinales botonSur = new VentanaBotonFlechasCardinales(this, 2, "flecha_S.png", sizeC, sizeD);
-    VentanaBotonFlechasCardinales botonOeste = new VentanaBotonFlechasCardinales(this, 3, "flecha_O.png", sizeD, sizeC);
-    VentanaBotonFlechasCardinales botonEste = new VentanaBotonFlechasCardinales(this, 4, "flecha_E.png", sizeD, sizeC);
+    VBotonFlechas botonNorte = new VBotonFlechas(this, 1, "flecha_N.png", sizeC, sizeD);
+    VBotonFlechas botonSur = new VBotonFlechas(this, 2, "flecha_S.png", sizeC, sizeD);
+    VBotonFlechas botonOeste = new VBotonFlechas(this, 3, "flecha_O.png", sizeD, sizeC);
+    VBotonFlechas botonEste = new VBotonFlechas(this, 4, "flecha_E.png", sizeD, sizeC);
 
 
-    VentanaContenedorPanelBorder(){
+    VPanelSS(Ventana ventana){
+
+        this.ventana = ventana;
+        panelInfo = ventana.panelAbajo.labelInfo2;
 
         this.setLayout(new BorderLayout());
         this.setBackground(Color.yellow);
@@ -46,6 +57,8 @@ public class VentanaContenedorPanelBorder extends JPanel {
         paneleste.add(botonEste);
         paneloeste.add(botonOeste);
 
+        panelInfo.setText(sistemaSolar.toString());
+
         this.setVisible(true);
     }
 
@@ -53,12 +66,12 @@ public class VentanaContenedorPanelBorder extends JPanel {
     public void refrescar(SistemaSolar sistemaSolar){
 
         this.sistemaSolar = sistemaSolar;
+        panelInfo.setText(sistemaSolar.toString());
         System.out.println("mostrando nuevo SS" + sistemaSolar.toString());
         this.remove(panelcentro);
         panelCentroUI();
         this.validate();
         this.repaint();
-
     }
 
 
@@ -75,10 +88,25 @@ public class VentanaContenedorPanelBorder extends JPanel {
 
         for (int i = 0; i < numCuerposCelestes; i++) {
 
-            Casilla nuevoCasilla = new Casilla(i , sistemaSolar.cuerpoCelestes[i] );
+            Casilla nuevoCasilla = new Casilla(ventana, i , sistemaSolar.cuerpoCelestes[i] );
             panel.add(nuevoCasilla);
             nuevoCasilla.setVisible(true);
         }
         this.add(panel, BorderLayout.CENTER);
     }
-} //Fin PanelBorderLayaout
+
+
+
+    class VSSPanelBorde extends  JLabel{
+
+        VSSPanelBorde(int X, int Y){
+            this.setLayout(new GridBagLayout());
+            this.setBackground(Color.black);
+            this.setOpaque(true);
+            this.setPreferredSize(new Dimension(X,Y));
+
+        }
+    }
+
+
+} //Fin PanelSS

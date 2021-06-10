@@ -5,19 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13560e4c-4d06-4912-be34-b19c62798ea8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CoordenadasGenerador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/Cargar_o_Generar_SistemaSolar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/LabelPersonalizado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelAbajo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelDerecho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelestePlaneta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteVacio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste_Asteroide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystem.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/BotonFlechasCardinales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaBotonFlechasCardinales.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/PanelBorde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaPanelBorde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/PanelBorderLayaout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaContenedorPanelBorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaBotonFlechasCardinales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VBotonFlechas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaContenedorPanelBorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelSS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VentanaPanelBorde.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Universo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +49,26 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1ti4WzrHNNsM863V2YHfPwvthdg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ogame2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2713085" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.andfres.logica" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -86,11 +104,27 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="7b577028-b2ae-4fad-9d46-f155318740e8">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="7b577028-b2ae-4fad-9d46-f155318740e8" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />

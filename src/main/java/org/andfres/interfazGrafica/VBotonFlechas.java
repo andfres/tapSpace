@@ -7,14 +7,14 @@ import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 
-class VentanaBotonFlechasCardinales extends JLabel {
+class VBotonFlechas extends JLabel {
 
-    VentanaContenedorPanelBorder parent;
+    VPanelSS parent;
     private int IDboton;
-    VentanaBotonFlechasCardinales boton = this;
+    VBotonFlechas boton = this;
     Color color = Color.darkGray;
 
-    VentanaBotonFlechasCardinales(VentanaContenedorPanelBorder parent, int IDboton, String imagen, int X , int Y){
+    VBotonFlechas(VPanelSS parent, int IDboton, String imagen, int X , int Y){
 
         this.parent = parent;
         this.IDboton = IDboton;
@@ -52,6 +52,10 @@ class VentanaBotonFlechasCardinales extends JLabel {
 
     } // Fin constructor
 
+//
+//    private void calcularNuevasCorrdenadas (int cambioX , int cambioY){
+//
+//    }
 
     private static void imprimir (JLabel label , String info){
         label.setText(info);
@@ -61,37 +65,40 @@ class VentanaBotonFlechasCardinales extends JLabel {
 
         int cambioCoordenadaX = 0;
         int cambioCoordenadaY = 0;
+        int Xactual = parent.sistemaSolar.getX();
+        int Yactual = parent.sistemaSolar.getY();
+
 
         switch (this.IDboton){
             case 1:
-                imprimir(Ventana.labelInfo, "apretaste boton arriba");
-                cambioCoordenadaX = 0;
-                cambioCoordenadaY = 1;
+                //imprimir(Ventana.labelInfo, "apretaste boton arriba");
+                cambioCoordenadaX = 0 + Xactual;
+                cambioCoordenadaY = 1 + Yactual;
 
                 break;
 
             case 2:
-                imprimir(Ventana.labelInfo, "apretaste boton abajo");
-                cambioCoordenadaX = 0;
-                cambioCoordenadaY = -1;
+                //imprimir(Ventana.labelInfo, "apretaste boton abajo");
+                cambioCoordenadaX = 0 + Xactual;
+                cambioCoordenadaY = -1 + Yactual;
 
                 break;
 
             case 3:
-                imprimir(Ventana.labelInfo, "apretaste boton izquierda");
-                cambioCoordenadaX = 0;
-                cambioCoordenadaY = -1;
+                //imprimir(Ventana.labelInfo, "apretaste boton izquierda");
+                cambioCoordenadaX = -1 + Xactual;
+                cambioCoordenadaY = 0 + Yactual;
                 break;
 
             case 4:
-                imprimir(Ventana.labelInfo, "apretaste boton derecha");
-                cambioCoordenadaX = 0;
-                cambioCoordenadaY = 1;
+                //imprimir(Ventana.labelInfo, "apretaste boton derecha");
+                cambioCoordenadaX = 1 + Xactual ;
+                cambioCoordenadaY = 0 + Yactual;
 
                 break;
         }
 
-        SistemaSolar sistemaSolar = new SistemaSolar(cambioCoordenadaX, cambioCoordenadaY );
+        SistemaSolar sistemaSolar = new SistemaSolar(cambioCoordenadaX, cambioCoordenadaY , "sin nombre");
         this.parent.refrescar(sistemaSolar);
 
     }

@@ -3,20 +3,30 @@ package org.andfres.logica;
 public class SistemaSolar {
 
     //Integer id;
-    static int xAnterior;
-    static int yAnterior;
-
+    //static int xAnterior;
+    //static int yAnterior;
+    Integer Id = null;
     int x;
     int y;
+    String name;
 
     public CuerpoCeleste [] cuerpoCelestes;
 
-    public SistemaSolar(int cambioCordenadaX , int cambioCordenadaY){
-        this.x = xAnterior+cambioCordenadaX;
-        this.y = yAnterior+cambioCordenadaY;
+    public SistemaSolar(int X , int Y, String name){
+        this.x = X;
+        this.y = Y;
         this.cuerpoCelestes = CuerposCelestesGenerador.crear_SS();
+        this.name = name;
     }
 
+    public SistemaSolar(Integer Id, int X , int Y, String name){
+        this.x = X;
+        this.y = Y;
+        //aqui cargar cuerpos celestes
+        this.cuerpoCelestes = CuerposCelestesGenerador.crear_SS();
+        this.name = name;
+        this.Id = Id;
+    }
 
 
 
@@ -29,6 +39,15 @@ public class SistemaSolar {
     public int getY(){
         return this.y;
     }
+
+    public Integer getId(){
+        return this.Id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
 
 
 
@@ -47,4 +66,7 @@ public class SistemaSolar {
         }
 
     }//fin inspeccionar
+
+
+
 }
