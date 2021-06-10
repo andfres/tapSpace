@@ -1,23 +1,49 @@
 package org.andfres.interfazGrafica;
 
 import org.andfres.logica.CuerpoCeleste;
+import org.andfres.logica.CuerpoCelestePlaneta;
 import org.andfres.logica.CuerposCelestesGenerador;
 import org.andfres.logica.SistemaSolar;
 
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Casilla extends JLabel  {
 
     public int num_casilla;
-    private Ventana ventana;
+    private VContenedor ventana;
+    JPopupMenu pop;
 
-    public Casilla(Ventana ventana, int num_boton , CuerpoCeleste cuerpoCeleste){
+    public Casilla(VContenedor ventana, int num_boton , CuerpoCeleste cuerpoCeleste){
 
         this.ventana = ventana;
         this.num_casilla = num_boton;
-        int size = Ventana.SIZE_TOTAL_SS / CuerposCelestesGenerador.NUMxLado;
+        int size = ventana.SIZE_TOTAL_SS / CuerposCelestesGenerador.NUMxLado;
+
+        pop = new JPopupMenu();
+        JMenuItem cambiarNombre = new JMenuItem("Cambiar nombre");
+        pop.add(cambiarNombre);
+
+        ActionListener ac = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //new Ventanilla(cuerpoCeleste[num_boton].get);
+
+                if (cuerpoCeleste instanceof CuerpoCelestePlaneta){
+
+                    //new Ventanilla(  (CuerpoCelestePlaneta) cuerpoCeleste.getNombre() );
+
+                }
+            }
+        };
+        cambiarNombre.addActionListener(ac);
+
+
+        setComponentPopupMenu(pop);
 
         this.setSize(size,size);
 
@@ -30,25 +56,36 @@ public class Casilla extends JLabel  {
         this.setIcon(icono);
 
         int ancho = this.getWidth();
-        int alto = this.getHeight();
+
 
 
         java.awt.event.MouseAdapter listener = new java.awt.event.MouseAdapter() {
             @Override
-            public void mouseClicked(java.awt.event.MouseEvent e) {
 
-                //System.out.println("Has hecho click en " + nombre_imagen);
-                //System.out.println(Universo.galaxia[num_boton].toString());
+                public void mouseClicked(java.awt.event.MouseEvent e) {
 
-                String info = "dimensiones del botón  \n  ancho: " +ancho + " alto: " + alto;
-                imprimir(ventana.panelAbajo.labelInfo,  info);
+                    String info = cuerpoCeleste.toString_detallado();
+                    imprimir(ventana.panelDerecho.label3,  info);
+
+
+
+//                if (SwingUtilities.isRightMouseButton(e)){
+//
+//                    imprimir(ventana.panelDerecho.label3,  "diste al derecho");
+//                    new Desplegable();}
             }
 
             @Override
             public void mouseEntered(java.awt.event.MouseEvent e){
 
                 String info = cuerpoCeleste.toString_detallado();
-                imprimir(ventana.panelAbajo.labelInfo, info);
+                imprimir(ventana.panelDerecho.label2,  info);
+            }
+
+            @Override
+            public void mouseExited (java.awt.event.MouseEvent e){
+
+                imprimir(ventana.panelDerecho.label2,  " Fuera de rango ");
             }
         };
 

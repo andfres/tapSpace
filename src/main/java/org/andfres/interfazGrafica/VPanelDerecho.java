@@ -5,14 +5,14 @@ import java.awt.*;
 
 public class VPanelDerecho extends JPanel {
 
-    Ventana ventana;
+    VContenedor ventana;
 
     JLabel label1;
     JLabel label2;
     JLabel label3;
     JLabel label4;
 
-    VPanelDerecho(Ventana ventana){
+    VPanelDerecho(VContenedor ventana){
 
         this.ventana = ventana;
 
@@ -28,10 +28,10 @@ public class VPanelDerecho extends JPanel {
          Dimension d = new Dimension(this.getWidth()  , (ventana.SIZE_TOTAL_Y - 100)  /4 );
         //Dimension d = new Dimension(1, 1 );
 
-        this.label1 = new LabelPersonalizado(d , Color.green , this);
-        this.label2 = new LabelPersonalizado(d , Color.blue , this);
-        this.label3 = new LabelPersonalizado(d , Color.green , this);
-        this.label4 = new LabelPersonalizado(d , Color.blue , this);
+        this.label1 = new LabelPersonalizado(d , new Color(170,170,170) , this);
+        this.label2 = new LabelPersonalizado(d , new Color(180,180,180) , this);
+        this.label3 = new LabelPersonalizado(d , new Color(190,190,190) , this);
+        this.label4 = new LabelPersonalizado(d , new Color(200,200,200) , this);
 
 
         ventana.add(this);

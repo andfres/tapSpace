@@ -14,10 +14,8 @@ public class App {
         ssdb = new BaseDatos();
         Ventana ventana = new Ventana();
 
-
-
-        ssdb.borrarTablas();
-        ssdb.crearTablas();
+        //ssdb.borrarTablas();
+        //ssdb.crearTablas();
 
     }
 

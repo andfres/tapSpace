@@ -1,6 +1,6 @@
 package org.andfres.logica;
 
-class CuerpoCelestePlaneta extends CuerpoCeleste{
+public class CuerpoCelestePlaneta extends CuerpoCeleste{
 
     //Parámetros
     private String nombre;
@@ -63,6 +63,12 @@ class CuerpoCelestePlaneta extends CuerpoCeleste{
         return s;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public String getNombre() {
+        return nombre;
+    }
 } //fin Planeta
 

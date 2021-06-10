@@ -16,7 +16,7 @@ public class VPanelSS extends JPanel {
 
 
 
-    private Ventana ventana;
+    VContenedor ventana;
     JLabel panelInfo;
 
     int sizeA = 450;
@@ -37,10 +37,10 @@ public class VPanelSS extends JPanel {
     VBotonFlechas botonEste = new VBotonFlechas(this, 4, "flecha_E.png", sizeD, sizeC);
 
 
-    VPanelSS(Ventana ventana){
+    VPanelSS(VContenedor ventana){
 
         this.ventana = ventana;
-        panelInfo = ventana.panelAbajo.labelInfo2;
+        panelInfo = ventana.panelDerecho.label1 ;
 
         this.setLayout(new BorderLayout());
         this.setBackground(Color.yellow);

@@ -5,12 +5,12 @@ import java.awt.*;
 
 public class VPanelAbajo extends JPanel {
 
-    Ventana ventana;
+    VContenedor ventana;
     JLabel labelInfo;
     JLabel labelInfo2;
 
 
-    VPanelAbajo(Ventana ventana){
+    VPanelAbajo(VContenedor ventana){
 
         this.ventana = ventana;
         //this.setBackground(Color.cyan);
