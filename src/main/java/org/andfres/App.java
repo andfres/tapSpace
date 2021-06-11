@@ -11,11 +11,14 @@ public class App {
 
     public static void main(String[] args) {
 
-        ssdb = new BaseDatos();
-        Ventana ventana = new Ventana();
 
-        //ssdb.borrarTablas();
-        //ssdb.crearTablas();
+        ssdb = new BaseDatos();
+
+
+        ssdb.borrarTablas();
+        ssdb.crearTablas();
+
+        Ventana ventana = new Ventana();
 
     }
 

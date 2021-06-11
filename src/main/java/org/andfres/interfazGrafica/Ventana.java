@@ -7,9 +7,9 @@ public class Ventana extends JFrame   {
     VContenedor contenedor;
     String texto;
 
-    public Ventana(String nombrePalenta){
+    public Ventana(){
 
-        this.texto = nombrePalenta;
+
         contenedor = new VContenedor();
         this.setTitle("Tap Space");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

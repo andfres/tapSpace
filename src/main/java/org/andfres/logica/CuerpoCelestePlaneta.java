@@ -14,10 +14,11 @@ public class CuerpoCelestePlaneta extends CuerpoCeleste{
     private String [] tipo_planeta_string = {"Roca" , "Agua" , "bosque", "Fuego"};
 
     //Constructor
-    public CuerpoCelestePlaneta(int numeroCC, Coordenada coordenada, String nombre, int tipo_planeta, String imagen) {
+    public CuerpoCelestePlaneta(SistemaSolar sistemaSolar , int numeroCC, Coordenada coordenada, String nombre, int tipo_planeta, String imagen) {
 
-        super.numeroCC = numeroCC;
-        super.coordenada = coordenada;
+        super(sistemaSolar,coordenada);
+
+        this.numeroCC = numeroCC;
         this.nombre = nombre;
         this.tipo_planeta = tipo_planeta;
 

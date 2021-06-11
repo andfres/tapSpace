@@ -1,6 +1,5 @@
 package org.andfres.interfazGrafica;
 
-import org.andfres.database.Cargar_o_Generar_SistemaSolar;
 import org.andfres.logica.CuerposCelestesGenerador;
 import org.andfres.logica.SistemaSolar;
 
@@ -10,7 +9,7 @@ import java.awt.*;
 public class VPanelSS extends JPanel {
 
 
-    SistemaSolar sistemaSolar = Cargar_o_Generar_SistemaSolar.cargarPrimerPlaneta();
+    SistemaSolar sistemaSolar = SistemaSolar.cargarSS(0,0);
     //SistemaSolar sistemaSolar = new SistemaSolar(0,0, "el primero");
     //recoger de la base de datos el ultimo sistema solar
 

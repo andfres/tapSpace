@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13560e4c-4d06-4912-be34-b19c62798ea8" name="Default Changelist" comment="mejora grafica">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VContenedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventanilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystem.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/database/Cargar_o_Generar_SistemaSolar.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Global.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelAbajo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelAbajo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelDerecho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelDerecho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VBotonFlechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VBotonFlechas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelSS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventanilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventanilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelestePlaneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelestePlaneta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteVacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteVacio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste_Asteroide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste_Asteroide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" afterDir="false" />
+    </list>
+    <list id="50e3bd8b-68e5-4280-8746-b963081464d5" name="Changes by javier" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +56,53 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="6" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="7" end1="7" start2="7" end2="17" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="8" end1="9" start2="18" end2="20" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="11" end1="11" start2="22" end2="23" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="19" end1="19" start2="31" end2="44" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="6" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="5" end1="5" start2="8" end2="9" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="47" end1="50" start2="51" end2="55" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="52" end1="53" start2="57" end2="59" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="55" end1="56" start2="61" end2="63" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="60" end1="61" start2="67" end2="70" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="65" end1="66" start2="74" end2="77" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="74" end1="74" start2="85" end2="86" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="98" end1="98" start2="110" end2="111" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="120" end1="120" start2="133" end2="134" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="128" end1="128" start2="142" end2="144" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="130" end1="130" start2="146" end2="149" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="132" end1="132" start2="151" end2="153" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="135" end1="136" start2="156" end2="162" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="143" end1="143" start2="169" end2="208" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="153" end1="154" start2="218" end2="218" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="155" end1="156" start2="219" end2="219" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="158" end1="159" start2="221" end2="222" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="163" end1="164" start2="226" end2="230" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="174" end1="175" start2="240" end2="268" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="182" end1="182" start2="275" end2="296" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="6" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="17" end1="18" start2="20" end2="21" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="19" end1="19" start2="22" end2="24" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="25" end1="26" start2="30" end2="31" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="28" end1="28" start2="33" end2="35" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="46" end1="46" start2="53" end2="58" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="68" end1="68" start2="80" end2="105" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1ti4WzrHNNsM863V2YHfPwvthdg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,7 +115,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ogame2" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2713085" />
@@ -105,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623341789169</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="mejora grafica">
+      <created>1623356091587</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623356091588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

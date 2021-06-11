@@ -18,7 +18,7 @@ public class CuerposCelestesGenerador {
     static ArrayList<Coordenada> coordenadas = new CoordenadasGenerador().crearCoordenadas();
 
 
-    private static CuerpoCeleste generar_CuerpoCeleste (int numeroCC , Coordenada cordenada){
+    private static CuerpoCeleste generar_CuerpoCeleste (SistemaSolar sistemaSolar , int numeroCC , Coordenada cordenada){
         int num = Aleatorizador.aletorizar(posiblidades_CuerposCelestes);
 
 
@@ -26,6 +26,7 @@ public class CuerposCelestesGenerador {
         switch (num){
             case 0: //Planeta
                 nuevoCuerpo = new CuerpoCelestePlaneta(
+                        sistemaSolar,
                         numeroCC,
                         cordenada,
                         Aleatorizador.generar_nombre_aleatorio(),
@@ -36,23 +37,23 @@ public class CuerposCelestesGenerador {
                 return nuevoCuerpo;
 
             case 1: //Asteroide
-                nuevoCuerpo = new CuerpoCeleste_Asteroide(numeroCC, cordenada);
+                nuevoCuerpo = new CuerpoCeleste_Asteroide(sistemaSolar, numeroCC, cordenada);
                 return nuevoCuerpo;
 
             case 2: //Vacío
-                nuevoCuerpo = new CuerpoCelesteVacio(numeroCC, cordenada);
+                nuevoCuerpo = new CuerpoCelesteVacio(sistemaSolar, numeroCC, cordenada);
                 return nuevoCuerpo;
 
         }
 
-        CuerpoCeleste cuerpo = new CuerpoCelesteVacio(numeroCC, cordenada);
+        CuerpoCeleste cuerpo = new CuerpoCelesteVacio(sistemaSolar, numeroCC, cordenada);
         return cuerpo;
     }
 
 
 
 
-    public static CuerpoCeleste [] crear_SS( ){
+    public static CuerpoCeleste [] crear_SS(SistemaSolar sistemaSolar){
 
         //System.out.println(coordenadas.toString());
 
@@ -60,7 +61,7 @@ public class CuerposCelestesGenerador {
 
         for (int x = 0; x < NUMCUERPOS; x++) {
             //System.out.println("creado cuerpo celeleste num " + x);
-            CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(x, coordenadas.get(x));
+            CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(sistemaSolar ,  x, coordenadas.get(x));
             cuerpoCelestes[x] = nuevoCuerpo;
         }
 

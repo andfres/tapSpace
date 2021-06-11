@@ -35,7 +35,7 @@ public class Casilla extends JLabel  {
 
                 if (cuerpoCeleste instanceof CuerpoCelestePlaneta){
 
-                    //new Ventanilla(  (CuerpoCelestePlaneta) cuerpoCeleste.getNombre() );
+                    new Ventanilla(  ((CuerpoCelestePlaneta) cuerpoCeleste).getNombre() );
 
                 }
             }

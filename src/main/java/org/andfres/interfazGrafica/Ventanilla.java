@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Ventanilla extends JDialog {
 
-    Ventanilla(){
+    Ventanilla(String cadena){
 
 
         this.setTitle("Cambiar nombre");

@@ -98,7 +98,8 @@ class VBotonFlechas extends JLabel {
                 break;
         }
 
-        SistemaSolar sistemaSolar = new SistemaSolar(cambioCoordenadaX, cambioCoordenadaY , "sin nombre");
+        SistemaSolar sistemaSolar = SistemaSolar.cargarSS(cambioCoordenadaX, cambioCoordenadaY);
+        //SistemaSolar sistemaSolar = new SistemaSolar(cambioCoordenadaX, cambioCoordenadaY , "sin nombre");
         this.parent.refrescar(sistemaSolar);
 
     }
