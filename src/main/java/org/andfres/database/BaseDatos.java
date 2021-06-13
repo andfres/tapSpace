@@ -1,10 +1,7 @@
 package org.andfres.database;
 
 
-import org.andfres.logica.Coordenada;
-import org.andfres.logica.CuerpoCeleste;
-import org.andfres.logica.CuerpoCelestePlaneta;
-import org.andfres.logica.SistemaSolar;
+import org.andfres.logica.*;
 
 import java.awt.*;
 import java.sql.Connection;
@@ -13,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class BaseDatos {
 
@@ -144,9 +143,32 @@ public class BaseDatos {
                 System.out.println("id: " +id + "x: " + x + "y: " + y);
 
                 ss = new SistemaSolar(id, x2, y2, name);
-                
+
+                ArrayList<CuerpoCeleste> cuerpos = new ArrayList<CuerpoCeleste>();
+
                 // Cargar los planetas
-                this.loadPlanetas(conn, ss);
+                this.loadPlanetas(conn, ss, cuerpos);
+                this.loadAsteroides(conn, ss, cuerpos);
+                this.loadVacios(conn, ss, cuerpos);
+
+                cuerpos.sort(new Comparator<CuerpoCeleste>() {
+                    @Override
+                    public int compare(CuerpoCeleste cc1, CuerpoCeleste cc2) {
+
+                        int x1 = cc1.getCoordenada().getX();
+                        int y1 = cc1.getCoordenada().getY();
+                        int x2 = cc2.getCoordenada().getX();
+                        int y2 = cc2.getCoordenada().getY();
+
+                        return (x1*100+y1) - (x2*100+y2);
+
+                    }
+
+                });
+
+
+                CuerpoCeleste [] cc = new CuerpoCeleste[cuerpos.size()];
+                ss.cuerpoCelestes = cuerpos.toArray(cc);
 
             }
             conn.close();
@@ -194,31 +216,26 @@ public class BaseDatos {
                 stmt.setInt(4, ss.getId());
             }
 
+            // Ejecutar el statement
+            stmt.executeUpdate();
 
+            // Leer el id auto-generado
             ResultSet rs = stmt.getGeneratedKeys();
-
-//            int newId;
-//            if (rs.next()) {
-//                newId =  rs.getInt(1);
-//                ss.setId(newId);
-//                System.err.println("Nuevo id " + newId);
-//
-//            }
-//
-
-
-
-            int newId = stmt.executeUpdate();
-            ss.setId(newId);
-            System.err.println("Nuevo id " + newId);
-
+            if (rs.next()) {
+                int newId =  rs.getInt(1);
+                ss.setId(newId);
+                System.err.println("Nuevo id " + newId);
+            }
 
 
             // Guardar los cuerpos celestes
-
             for (CuerpoCeleste cc: ss.cuerpoCelestes) {
                 if(cc instanceof CuerpoCelestePlaneta){
-                    savePlaneta(conn, (CuerpoCelestePlaneta) cc);
+                    guardarPlaneta(conn, (CuerpoCelestePlaneta) cc);
+                } else if(cc instanceof CuerpoCeleste_Asteroide){
+                    guardarAsteroide(conn, (CuerpoCeleste_Asteroide) cc);
+                } else if(cc instanceof CuerpoCelesteVacio){
+                    guardarVacio(conn, (CuerpoCelesteVacio) cc);
                 }
             }
 
@@ -232,7 +249,7 @@ public class BaseDatos {
     }// fin load ss
     
     
-    public void savePlaneta(Connection conn, CuerpoCelestePlaneta planeta) throws SQLException {
+    public void guardarPlaneta(Connection conn, CuerpoCelestePlaneta planeta) throws SQLException {
 
         //System.out.println ("info "+ planeta.toString());
 
@@ -245,6 +262,38 @@ public class BaseDatos {
         stmt.setString(3, planeta.getNombre());
         stmt.setString(4, planeta.getNombreImagen());
         stmt.setInt(5, planeta.getSistemaSolar().getId() );
+
+
+        stmt.executeUpdate();
+
+
+    }
+
+    public void guardarAsteroide(Connection conn, CuerpoCeleste_Asteroide asteroide) throws SQLException {
+
+        String sql = "insert into Asteroide(x,y,id_SS) values(?,?,?);";
+
+        PreparedStatement stmt = conn.prepareStatement(sql);
+
+        stmt.setInt(1, asteroide.getCoordenada().getX() );
+        stmt.setInt(2, asteroide.getCoordenada().getY());
+        stmt.setInt(3, asteroide.getSistemaSolar().getId() );
+
+
+        stmt.executeUpdate();
+
+
+    }
+
+    public void guardarVacio(Connection conn, CuerpoCelesteVacio vacio) throws SQLException {
+
+        String sql = "insert into Vacio(x,y,id_SS) values(?,?,?);";
+
+        PreparedStatement stmt = conn.prepareStatement(sql);
+
+        stmt.setInt(1, vacio.getCoordenada().getX() );
+        stmt.setInt(2, vacio.getCoordenada().getY());
+        stmt.setInt(3, vacio.getSistemaSolar().getId() );
 
 
         stmt.executeUpdate();

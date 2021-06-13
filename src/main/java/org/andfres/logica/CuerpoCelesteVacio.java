@@ -1,7 +1,7 @@
 package org.andfres.logica;
 
 
-class CuerpoCelesteVacio extends CuerpoCeleste{
+public class CuerpoCelesteVacio extends CuerpoCeleste{
 
     public CuerpoCelesteVacio(SistemaSolar sistemaSolar, int numeroCC, Coordenada coordenada) {
 
