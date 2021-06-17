@@ -4,21 +4,20 @@ public class CuerpoCelestePlaneta extends CuerpoCeleste{
 
     //Parámetros
     private String nombre;
-    private int tipo_planeta;
-    private String [] []  array_nombres_fotos = {
+    private final int tipo_planeta;
+    private final String [] []  array_nombres_fotos = {
          {"planeta_03.jpg" , "planeta_04.jpg", "planeta_16.jpg", "planeta_18.jpg" },
          {"planeta_02.jpg" , "planeta_07.jpg", "planeta_08.jpg", "planeta_14.jpg" },
          {"planeta_01.jpg" , "planeta_05.jpg", "planeta_12.jpg", "planeta_13.jpg" },
          {"planeta_10.jpg" , "planeta_11.jpg" }};
 
-    private String [] tipo_planeta_string = {"Roca" , "Agua" , "bosque", "Fuego"};
+    private final String [] tipo_planeta_string = {"Roca" , "Agua" , "bosque", "Fuego"};
 
     //Constructor
     public CuerpoCelestePlaneta(SistemaSolar sistemaSolar , Coordenada coordenada, String nombre, int tipo_planeta, String imagen) {
 
         super(sistemaSolar,coordenada);
 
-        this.numeroCC = numeroCC;
         this.nombre = nombre;
         this.tipo_planeta = tipo_planeta;
 
@@ -51,7 +50,7 @@ public class CuerpoCelestePlaneta extends CuerpoCeleste{
 
     public String toString_detallado() {
 
-        String s = String.format("""
+        return String.format("""
             <html>
                 %s
                 <p>Planeta <span style="font-size: 18"> %s </span>  </p>
@@ -60,8 +59,6 @@ public class CuerpoCelestePlaneta extends CuerpoCeleste{
             </html>
             
             """,mostrarCoordenada2(), nombre,  tipo_planeta_string[tipo_planeta]  );
-
-        return s;
     }
 
     public void setNombre(String nombre) {

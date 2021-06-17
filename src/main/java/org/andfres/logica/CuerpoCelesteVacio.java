@@ -6,7 +6,7 @@ public class CuerpoCelesteVacio extends CuerpoCeleste{
     public CuerpoCelesteVacio(SistemaSolar sistemaSolar,  Coordenada coordenada) {
 
         super(sistemaSolar,coordenada);
-        this.numeroCC = numeroCC;
+
         this.nombre_imagen = "void.jpg";
     }
     public String toString() {
@@ -15,13 +15,12 @@ public class CuerpoCelesteVacio extends CuerpoCeleste{
 
 
     public String toString_detallado() {
-        String s = String.format("""
+        return String.format("""
             <html>
                 %s
                 <p style="font-size: 16"> Sólo el vacío.</p>
             </html>
             """,mostrarCoordenada2() );
-        return s;
     }
 
 } //fin Asteroide

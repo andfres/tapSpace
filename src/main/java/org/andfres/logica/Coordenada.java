@@ -1,7 +1,5 @@
 package org.andfres.logica;
 
-import java.util.Comparator;
-
 public class Coordenada implements Comparable<Coordenada> {
 
     protected int coorX;

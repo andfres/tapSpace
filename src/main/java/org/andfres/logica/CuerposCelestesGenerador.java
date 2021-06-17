@@ -7,7 +7,7 @@ public class CuerposCelestesGenerador {
     public static final int NUMxLado = 10;
     public static final int NUMCUERPOS = NUMxLado * NUMxLado;
 
-    private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
+    private static final int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
     private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //planeta, asteroide, vacío
 
     static ArrayList<Coordenada> coordenadas = new CoordenadasGenerador().crearCoordenadas();
@@ -18,8 +18,8 @@ public class CuerposCelestesGenerador {
 
 
         CuerpoCeleste nuevoCuerpo;
-        switch (num){
-            case 0: //Planeta
+        switch (num) {
+            case 0 -> { //Planeta
                 nuevoCuerpo = new CuerpoCelestePlaneta(
                         sistemaSolar,
                         cordenada,
@@ -27,21 +27,19 @@ public class CuerposCelestesGenerador {
                         Aleatorizador.aletorizar(posiblidades_planetas),
                         null //ninguna imagen
                 );
-
                 return nuevoCuerpo;
-
-            case 1: //Asteroide
-                nuevoCuerpo = new CuerpoCelesteAsteroide(sistemaSolar,  cordenada);
+            }
+            case 1 -> { //Asteroide
+                nuevoCuerpo = new CuerpoCelesteAsteroide(sistemaSolar, cordenada);
                 return nuevoCuerpo;
-
-            case 2: //Vacío
-                nuevoCuerpo = new CuerpoCelesteVacio(sistemaSolar,  cordenada);
+            }
+            case 2 -> { //Vacío
+                nuevoCuerpo = new CuerpoCelesteVacio(sistemaSolar, cordenada);
                 return nuevoCuerpo;
-
+            }
         }
 
-        CuerpoCeleste cuerpo = new CuerpoCelesteVacio(sistemaSolar, cordenada);
-        return cuerpo;
+        return new CuerpoCelesteVacio(sistemaSolar, cordenada);
     }
 
 
@@ -62,6 +60,6 @@ public class CuerposCelestesGenerador {
         System.out.println("Cuerpos celestes instanciados");
         return cuerpoCelestes;
 
-    }; // fin crear universo
+    } // fin crear universo
     
 }

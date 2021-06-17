@@ -9,9 +9,7 @@ public class VContenedor extends JPanel{
     public final int SIZE_TOTAL_Y = SIZE_TOTAL_SS;
     public static final int SIZE_TOTAL_SS = 600;
 
-
     VPanelDerecho panelDerecho;
-    //VPanelAbajo panelAbajo;
     VPanelSS panelUniverso;
 
     public  VContenedor(){
@@ -24,7 +22,6 @@ public class VContenedor extends JPanel{
         panelUniverso = new VPanelSS(this);
 
 
-        //this.setSize(SIZE_TOTAL_X,SIZE_TOTAL_Y);
         Dimension d = new Dimension(SIZE_TOTAL_X,SIZE_TOTAL_Y);
 
         this.setPreferredSize(d);

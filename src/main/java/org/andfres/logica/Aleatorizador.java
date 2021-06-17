@@ -7,7 +7,6 @@ public class Aleatorizador {
     private static final String VOCALES = "aeiou" ;
     private static final String [] SILABAS = {"ch", "tg" , "ks" ,  "th" , "gl" , "nk", "gn"  };
 
-    static String [] nombres = new String[100];
 
     public static int int_aleatorio(int min , int max){
 
@@ -19,12 +18,9 @@ public class Aleatorizador {
     public static int int_aleatorio(String string){
         return (int)(Math. random()*(string.length()));
     }
-    public static float float_aleatorio(){
-        return  (float) Math.random();
-    }
 
     public static String generar_nombre_aleatorio (){
-        String nombre = "";
+        StringBuilder nombre = new StringBuilder();
         char letra;
         int longitud_nombre = int_aleatorio(4,7);
 
@@ -36,25 +32,24 @@ public class Aleatorizador {
                 //Probabilidad de que sea una silaba extraña, doble o con tilde
                 if (int_aleatorio() > 15){
                     letra = CONSONANTES.charAt(int_aleatorio(CONSONANTES));
-                    nombre += letra;
+                    nombre.append(letra);
                 }else {
-                    nombre += SILABAS[int_aleatorio(0, SILABAS.length)];
+                    nombre.append(SILABAS[int_aleatorio(0, SILABAS.length)]);
                 }
 
             }else {
                 letra = VOCALES.charAt(int_aleatorio(VOCALES));
-                nombre += letra;
+                nombre.append(letra);
             }
         }
 
         //Porcentaje puede acabar en número
         if (int_aleatorio() < 10 ){
-            nombre += "-" + int_aleatorio() ;
+            nombre.append("-").append(int_aleatorio());
         }
 
         //Primera letra en mayúsculas
-        String cap = nombre.substring(0, 1).toUpperCase() + nombre.substring(1);
-        return cap;
+        return nombre.substring(0, 1).toUpperCase() + nombre.substring(1);
     }
 
 

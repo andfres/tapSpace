@@ -25,8 +25,6 @@ public class VMenu extends JDialog {
         GridLayout layaout = new GridLayout(4,2,10,10);
 
         this.setLayout(layaout);
-       // layaout.setHgap(10);
-        //layaout.setVgap(10);
 
         this.getContentPane().setBackground(Color.darkGray);
 

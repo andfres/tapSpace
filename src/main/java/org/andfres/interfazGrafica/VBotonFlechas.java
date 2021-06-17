@@ -52,14 +52,7 @@ class VBotonFlechas extends JLabel {
 
     } // Fin constructor
 
-//
-//    private void calcularNuevasCorrdenadas (int cambioX , int cambioY){
-//
-//    }
 
-    public static void imprimir (JLabel label , String info){
-        label.setText(info);
-    }
 
     private void cambiarCordenadasSS (){
 
@@ -69,33 +62,27 @@ class VBotonFlechas extends JLabel {
         int Yactual = parent.sistemaSolar.getY();
 
 
-        switch (this.IDboton){
-            case 1:
+        switch (this.IDboton) {
+            case 1 -> {
                 //imprimir(Ventana.labelInfo, "apretaste boton arriba");
-                cambioCoordenadaX = 0 + Xactual;
+                cambioCoordenadaX = Xactual;
                 cambioCoordenadaY = 1 + Yactual;
-
-                break;
-
-            case 2:
+            }
+            case 2 -> {
                 //imprimir(Ventana.labelInfo, "apretaste boton abajo");
-                cambioCoordenadaX = 0 + Xactual;
+                cambioCoordenadaX = Xactual;
                 cambioCoordenadaY = -1 + Yactual;
-
-                break;
-
-            case 3:
+            }
+            case 3 -> {
                 //imprimir(Ventana.labelInfo, "apretaste boton izquierda");
                 cambioCoordenadaX = -1 + Xactual;
-                cambioCoordenadaY = 0 + Yactual;
-                break;
-
-            case 4:
+                cambioCoordenadaY = Yactual;
+            }
+            case 4 -> {
                 //imprimir(Ventana.labelInfo, "apretaste boton derecha");
-                cambioCoordenadaX = 1 + Xactual ;
-                cambioCoordenadaY = 0 + Yactual;
-
-                break;
+                cambioCoordenadaX = 1 + Xactual;
+                cambioCoordenadaY = Yactual;
+            }
         }
 
         SistemaSolar sistemaSolar = SistemaSolar.cargarSS(cambioCoordenadaX, cambioCoordenadaY);

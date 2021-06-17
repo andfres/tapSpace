@@ -2,9 +2,6 @@ package  org.andfres.interfazGrafica;
 
 
 import javax.swing.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.sql.SQLOutput;
 
 public class Ventana extends JFrame   {
 
@@ -22,9 +19,7 @@ public class Ventana extends JFrame   {
 
         this.setLocationRelativeTo(contenedor);
         this.setBounds(350,250,0,0);
-        //this.setLayout(null);
 
-        //this.setSize(1000,1000);
 
         this.add(contenedor);
         this.setVisible(true);

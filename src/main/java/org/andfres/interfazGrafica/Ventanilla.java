@@ -36,7 +36,7 @@ public class Ventanilla extends JDialog {
         boton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //super.mouseClicked(e);
+
                 String nombre = campo.getText();
                 Global.imprimir(VPanelDerecho.label4 ,"nombre cambiado: " + nombre);
                 cuerpoCeleste.setNombre(nombre);

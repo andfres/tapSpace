@@ -1,6 +1,5 @@
 package org.andfres.logica;
 
-import java.util.Comparator;
 
 public class CuerpoCeleste {
     //Parámetros

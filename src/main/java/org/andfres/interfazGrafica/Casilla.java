@@ -56,9 +56,6 @@ public class Casilla extends JLabel  {
 
         this.setIcon(icono);
 
-        int ancho = this.getWidth();
-
-
 
         java.awt.event.MouseAdapter listener = new java.awt.event.MouseAdapter() {
             @Override
@@ -68,12 +65,6 @@ public class Casilla extends JLabel  {
                     String info = cuerpoCeleste.toString_detallado();
                     imprimir(ventana.panelDerecho.label3,  info);
 
-
-
-//                if (SwingUtilities.isRightMouseButton(e)){
-//
-//                    imprimir(ventana.panelDerecho.label3,  "diste al derecho");
-//                    new Desplegable();}
             }
 
             @Override

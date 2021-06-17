@@ -3,6 +3,7 @@ package org.andfres.interfazGrafica;
 import javax.swing.*;
 import java.awt.*;
 
+@Deprecated
 public class VPanelAbajo extends JPanel {
 
     VContenedor ventana;

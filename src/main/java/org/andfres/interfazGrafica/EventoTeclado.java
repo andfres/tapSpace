@@ -12,10 +12,6 @@ public class EventoTeclado implements KeyListener {
         this.menu = menu;
     }
 
-    public EventoTeclado(){
-
-    }
-
 
     @Override
     public void keyPressed(KeyEvent e ) {
