@@ -9,7 +9,7 @@ import java.awt.*;
 public class VPanelSS extends JPanel {
 
 
-    SistemaSolar sistemaSolar = SistemaSolar.cargarSS(0,0);
+    SistemaSolar sistemaSolar = SistemaSolar. cargarSS(0,0);
     //SistemaSolar sistemaSolar = new SistemaSolar(0,0, "el primero");
     //recoger de la base de datos el ultimo sistema solar
 
@@ -56,7 +56,10 @@ public class VPanelSS extends JPanel {
         paneleste.add(botonEste);
         paneloeste.add(botonOeste);
 
-        panelInfo.setText(sistemaSolar.toString());
+        panelInfo.setText(sistemaSolar.toString_detallado());
+
+
+
 
         this.setVisible(true);
     }
@@ -64,9 +67,10 @@ public class VPanelSS extends JPanel {
     // Refresco el panel panel del centro y traigo un nuevo SS
     public void refrescar(SistemaSolar sistemaSolar){
 
+
         this.sistemaSolar = sistemaSolar;
-        panelInfo.setText(sistemaSolar.toString());
-        System.out.println("mostrando nuevo SS" + sistemaSolar.toString());
+        panelInfo.setText(sistemaSolar.toString_detallado());
+
         this.remove(panelcentro);
         panelCentroUI();
         this.validate();

@@ -3,7 +3,7 @@ package org.andfres.logica;
 
 public class CuerpoCelesteVacio extends CuerpoCeleste{
 
-    public CuerpoCelesteVacio(SistemaSolar sistemaSolar, int numeroCC, Coordenada coordenada) {
+    public CuerpoCelesteVacio(SistemaSolar sistemaSolar,  Coordenada coordenada) {
 
         super(sistemaSolar,coordenada);
         this.numeroCC = numeroCC;

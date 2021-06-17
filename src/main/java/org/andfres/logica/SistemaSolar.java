@@ -5,9 +5,7 @@ import org.andfres.database.BaseDatos;
 
 public class SistemaSolar  {
 
-    //Integer id;
-    //static int xAnterior;
-    //static int yAnterior;
+
     Integer Id = null;
     int x;
     int y;
@@ -18,7 +16,7 @@ public class SistemaSolar  {
     public SistemaSolar(int X , int Y, String name){
         this.x = X;
         this.y = Y;
-        this.cuerpoCelestes = CuerposCelestesGenerador.crear_SS(this);
+        this.cuerpoCelestes = CuerposCelestesGenerador.crear_CCs(this);
         this.name = name;
 
         System.out.println("Nuevo sistema solar generado");
@@ -59,9 +57,25 @@ public class SistemaSolar  {
 
 
     public String toString(){
-        return "  SS [" + this.x + " , " + this.y + "] ";
+        return "  SS[" + this.x + " , " + this.y + "] ";
 
     }
+
+    public String toString_detallado() {
+
+        String s = String.format("""
+            <html>
+                
+                <p>Sistema Solar</p>
+                <p>Cordendas %s / %s </p>
+                
+            </html>
+            
+            """, x , y );
+
+        return s;
+    }
+
 
 
 
@@ -81,13 +95,13 @@ public class SistemaSolar  {
 
         BaseDatos ssdb = App.ssdb;
         //Cargo sistema solar
-        SistemaSolar ss = ssdb.load(x, y);
+        SistemaSolar ss = ssdb.cargar(x, y);
         //Si no hay lo creo
         if (ss == null) {
 
             System.out.println("No hay SS en  (" + x + "," + y + "), creando uno");
             ss = new SistemaSolar(x, y, "Alpha Centauri");
-            ssdb.save(ss);
+            ssdb.guardar(ss);
 
         } else {
             System.out.println("Cargando SS: " + ss.toString());

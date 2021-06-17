@@ -3,9 +3,9 @@ package org.andfres.logica;
 
 public class Aleatorizador {
 
-    static final String letras = "bcdfghjklmpkrstvwyxyz";
-    static final String vocales = "aeiou" ;
-    static final String [] silabas = {"ch", "tg" , "ks" ,  "th" , "gl" , "nk", "gn"  };
+    private static final String CONSONANTES = "bcdfghjklmpkrstvwyxyz";
+    private static final String VOCALES = "aeiou" ;
+    private static final String [] SILABAS = {"ch", "tg" , "ks" ,  "th" , "gl" , "nk", "gn"  };
 
     static String [] nombres = new String[100];
 
@@ -35,14 +35,14 @@ public class Aleatorizador {
 
                 //Probabilidad de que sea una silaba extraña, doble o con tilde
                 if (int_aleatorio() > 15){
-                    letra = letras.charAt(int_aleatorio(letras));
+                    letra = CONSONANTES.charAt(int_aleatorio(CONSONANTES));
                     nombre += letra;
                 }else {
-                    nombre += silabas[int_aleatorio(0, silabas.length)];
+                    nombre += SILABAS[int_aleatorio(0, SILABAS.length)];
                 }
 
             }else {
-                letra = vocales.charAt(int_aleatorio(vocales));
+                letra = VOCALES.charAt(int_aleatorio(VOCALES));
                 nombre += letra;
             }
         }

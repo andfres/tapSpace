@@ -3,7 +3,6 @@ package org.andfres.interfazGrafica;
 import org.andfres.logica.CuerpoCeleste;
 import org.andfres.logica.CuerpoCelestePlaneta;
 import org.andfres.logica.CuerposCelestesGenerador;
-import org.andfres.logica.SistemaSolar;
 
 
 import javax.swing.*;
@@ -23,23 +22,26 @@ public class Casilla extends JLabel  {
         this.num_casilla = num_boton;
         int size = ventana.SIZE_TOTAL_SS / CuerposCelestesGenerador.NUMxLado;
 
+
         pop = new JPopupMenu();
         JMenuItem cambiarNombre = new JMenuItem("Cambiar nombre");
-        pop.add(cambiarNombre);
+
+        if (cuerpoCeleste instanceof CuerpoCelestePlaneta){
+            pop.add(cambiarNombre);
+        }
 
         ActionListener ac = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //new Ventanilla(cuerpoCeleste[num_boton].get);
-
                 if (cuerpoCeleste instanceof CuerpoCelestePlaneta){
 
-                    new Ventanilla(  ((CuerpoCelestePlaneta) cuerpoCeleste).getNombre() );
+                    new Ventanilla(  ((CuerpoCelestePlaneta) cuerpoCeleste) );
 
                 }
             }
         };
+
         cambiarNombre.addActionListener(ac);
 
 
@@ -47,8 +49,7 @@ public class Casilla extends JLabel  {
 
         this.setSize(size,size);
 
-
-        final String path_imagen = Global.rutaImagenes + cuerpoCeleste.nombre_imagen;
+        final String path_imagen = Global.rutaImagenes + cuerpoCeleste.getNombreImagen();
 
         ImageIcon img = new ImageIcon(path_imagen);
         Icon icono = new ImageIcon(img.getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT));

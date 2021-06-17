@@ -57,7 +57,7 @@ class VBotonFlechas extends JLabel {
 //
 //    }
 
-    private static void imprimir (JLabel label , String info){
+    public static void imprimir (JLabel label , String info){
         label.setText(info);
     }
 

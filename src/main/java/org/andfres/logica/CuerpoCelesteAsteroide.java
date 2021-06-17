@@ -1,8 +1,8 @@
 package org.andfres.logica;
 
-public class CuerpoCeleste_Asteroide extends CuerpoCeleste{
+public class CuerpoCelesteAsteroide extends CuerpoCeleste{
 
-    public CuerpoCeleste_Asteroide(SistemaSolar sistemaSolar, int numeroCC, Coordenada coordenada) {
+    public CuerpoCelesteAsteroide(SistemaSolar sistemaSolar, Coordenada coordenada) {
         super(sistemaSolar,coordenada);
 
         this.numeroCC = numeroCC;

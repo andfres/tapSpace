@@ -1,10 +1,12 @@
 package org.andfres.logica;
 
+import java.util.Comparator;
+
 public class CuerpoCeleste {
     //Parámetros
     int numeroCC;
-    protected Coordenada coordenada;
-    public String nombre_imagen;
+    Coordenada coordenada;
+    String nombre_imagen;
     SistemaSolar sistemaSolar;
 
 

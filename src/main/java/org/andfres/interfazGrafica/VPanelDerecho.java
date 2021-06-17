@@ -10,7 +10,7 @@ public class VPanelDerecho extends JPanel {
     JLabel label1;
     JLabel label2;
     JLabel label3;
-    JLabel label4;
+    public static JLabel label4;
 
     VPanelDerecho(VContenedor ventana){
 

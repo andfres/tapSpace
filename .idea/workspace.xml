@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13560e4c-4d06-4912-be34-b19c62798ea8" name="Default Changelist" comment="base datos mejorado">
+    <list default="true" id="13560e4c-4d06-4912-be34-b19c62798ea8" name="Default Changelist" comment="conexion funciando">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/EventoTeclado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/SolarSystem.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Casilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VBotonFlechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VBotonFlechas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelDerecho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelDerecho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/VPanelSS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventanilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/interfazGrafica/Ventanilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Aleatorizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Aleatorizador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelestePlaneta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelestePlaneta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteVacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteVacio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste_Asteroide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCelesteAsteroide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerposCelestesGenerador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java" afterDir="false" />
     </list>
     <list id="50e3bd8b-68e5-4280-8746-b963081464d5" name="Changes by javier" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java" afterDir="false" />
@@ -45,22 +62,52 @@
     </file-type-list>
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/logica/Coordenada.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="5" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="16" end1="16" start2="18" end2="50" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/logica/SistemaSolar.java">
+      <ranges>
+        <range start1="7" end1="10" start2="7" end2="8" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="20" end1="21" start2="18" end2="19" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="53" end1="53" start2="51" end2="56" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="61" end1="62" start2="64" end2="65" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="64" end1="64" start2="67" end2="83" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="83" end1="84" start2="102" end2="103" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="89" end1="90" start2="108" end2="109" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/main/java/org/andfres/database/BaseDatos.java">
       <ranges>
-        <range start1="3" end1="7" start2="3" end2="4" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="15" end1="15" start2="12" end2="14" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="146" end1="147" start2="145" end2="148" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="148" end1="149" start2="149" end2="171" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="151" end1="151" start2="173" end2="175" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
-        <range start1="168" end1="168" start2="192" end2="286" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
-        <range start1="185" end1="186" start2="303" end2="305" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
-        <range start1="196" end1="196" start2="315" end2="317" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="197" end1="197" start2="318" end2="319" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="198" end1="214" start2="320" end2="325" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="217" end1="218" start2="328" end2="328" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="220" end1="221" start2="330" end2="335" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="234" end1="235" start2="348" end2="349" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
-        <range start1="254" end1="254" start2="368" end2="400" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="5" end1="6" start2="5" end2="5" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="13" end1="13" start2="12" end2="13" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="59" end1="59" start2="59" end2="60" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="117" end1="118" start2="118" end2="119" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="149" end1="163" start2="150" end2="153" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="164" end1="165" start2="154" end2="154" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="166" end1="168" start2="155" end2="157" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="173" end1="173" start2="162" end2="164" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="190" end1="190" start2="181" end2="268" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="193" end1="195" start2="271" end2="272" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="207" end1="208" start2="284" end2="285" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
+        <range start1="234" end1="236" start2="311" end2="313" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="252" end1="253" start2="329" end2="329" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="254" end1="256" start2="330" end2="331" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="262" end1="264" start2="337" end2="340" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="267" end1="269" start2="343" end2="343" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="271" end1="272" start2="345" end2="346" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="281" end1="282" start2="355" end2="355" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="283" end1="284" start2="356" end2="356" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="302" end1="302" start2="374" end2="407" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/andfres/logica/CuerpoCeleste.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="5" end1="7" start2="7" end2="9" changelist="13560e4c-4d06-4912-be34-b19c62798ea8" />
+        <range start1="32" end1="32" start2="34" end2="51" changelist="50e3bd8b-68e5-4280-8746-b963081464d5" />
       </ranges>
     </file>
   </component>
@@ -77,11 +124,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tapSpace" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2713085" />
-    <property name="settings.editor.selected.configurable" value="shared-indexes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -138,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623452079327</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="conexion funciando">
+      <created>1623596594789</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623596594789</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +226,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mejora grafica" />
     <MESSAGE value="base datos mejorado" />
-    <option name="LAST_COMMIT_MESSAGE" value="base datos mejorado" />
+    <MESSAGE value="conexion funciando" />
+    <option name="LAST_COMMIT_MESSAGE" value="conexion funciando" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

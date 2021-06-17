@@ -1,11 +1,16 @@
 package  org.andfres.interfazGrafica;
 
+
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.sql.SQLOutput;
 
 public class Ventana extends JFrame   {
 
     VContenedor contenedor;
     String texto;
+    EventoTeclado tecla;
 
     public Ventana(){
 
@@ -25,6 +30,14 @@ public class Ventana extends JFrame   {
         this.setVisible(true);
         this.pack();
 
+        //Menú configuracion
+        VMenu menu = new VMenu();
+        //Creo objeto del evento que muestra el menú al pulsar Esc
+        tecla = new EventoTeclado(menu);
+        addKeyListener(tecla);
+
+        menu.prueba(tecla);
+
+
     }
 }
-

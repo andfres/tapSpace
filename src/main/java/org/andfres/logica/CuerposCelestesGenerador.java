@@ -8,17 +8,12 @@ public class CuerposCelestesGenerador {
     public static final int NUMCUERPOS = NUMxLado * NUMxLado;
 
     private static int[] posiblidades_planetas = {70,30, 20,20 }; //1 roca , 2 fuego , 3 agua, 4 bosque
-    private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //normal, basura, vacío
-
-    //public static CuerpoCeleste [] cuerpoCelestes = new CuerpoCeleste [NUMCUERPOS];
-
-    //static ArrayList<Coordenada> coordenadas = new ArrayList<Coordenada>();
-
+    private final static int[] posiblidades_CuerposCelestes = {40, 20, 20}; //planeta, asteroide, vacío
 
     static ArrayList<Coordenada> coordenadas = new CoordenadasGenerador().crearCoordenadas();
 
 
-    private static CuerpoCeleste generar_CuerpoCeleste (SistemaSolar sistemaSolar , int numeroCC , Coordenada cordenada){
+    private static CuerpoCeleste generar_CuerpoCeleste (SistemaSolar sistemaSolar , Coordenada cordenada){
         int num = Aleatorizador.aletorizar(posiblidades_CuerposCelestes);
 
 
@@ -27,7 +22,6 @@ public class CuerposCelestesGenerador {
             case 0: //Planeta
                 nuevoCuerpo = new CuerpoCelestePlaneta(
                         sistemaSolar,
-                        numeroCC,
                         cordenada,
                         Aleatorizador.generar_nombre_aleatorio(),
                         Aleatorizador.aletorizar(posiblidades_planetas),
@@ -37,23 +31,23 @@ public class CuerposCelestesGenerador {
                 return nuevoCuerpo;
 
             case 1: //Asteroide
-                nuevoCuerpo = new CuerpoCeleste_Asteroide(sistemaSolar, numeroCC, cordenada);
+                nuevoCuerpo = new CuerpoCelesteAsteroide(sistemaSolar,  cordenada);
                 return nuevoCuerpo;
 
             case 2: //Vacío
-                nuevoCuerpo = new CuerpoCelesteVacio(sistemaSolar, numeroCC, cordenada);
+                nuevoCuerpo = new CuerpoCelesteVacio(sistemaSolar,  cordenada);
                 return nuevoCuerpo;
 
         }
 
-        CuerpoCeleste cuerpo = new CuerpoCelesteVacio(sistemaSolar, numeroCC, cordenada);
+        CuerpoCeleste cuerpo = new CuerpoCelesteVacio(sistemaSolar, cordenada);
         return cuerpo;
     }
 
 
 
 
-    public static CuerpoCeleste [] crear_SS(SistemaSolar sistemaSolar){
+    public static CuerpoCeleste [] crear_CCs(SistemaSolar sistemaSolar){
 
         //System.out.println(coordenadas.toString());
 
@@ -61,7 +55,7 @@ public class CuerposCelestesGenerador {
 
         for (int x = 0; x < NUMCUERPOS; x++) {
             //System.out.println("creado cuerpo celeleste num " + x);
-            CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(sistemaSolar ,  x, coordenadas.get(x));
+            CuerpoCeleste nuevoCuerpo = generar_CuerpoCeleste(sistemaSolar ,   coordenadas.get(x));
             cuerpoCelestes[x] = nuevoCuerpo;
         }
 
